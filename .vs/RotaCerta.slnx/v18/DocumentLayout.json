@@ -1,0 +1,398 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\modelsauthentication\\responselogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\modelsauthentication\\responselogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.infraestructure\\services\\authservice\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|solutionrelative:rotacerta.infraestructure\\services\\authservice\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\modelsauthentication\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\modelsauthentication\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\queries\\viagem\\obterviagemporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\queries\\viagem\\obterviagemporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\queries\\viagem\\obterviagemporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\queries\\viagem\\obterviagemporidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\dtos\\viagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\dtos\\viagemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\dtos\\veiculoresumidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\dtos\\veiculoresumidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\dtos\\entregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\dtos\\entregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.infraestructure\\repository\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|solutionrelative:rotacerta.infraestructure\\repository\\veiculorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\queries\\veiculo\\obterveiculoporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\queries\\veiculo\\obterveiculoporidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\dtos\\veiculocomalertadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\dtos\\veiculocomalertadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.infraestructure\\configurations\\viagemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|solutionrelative:rotacerta.infraestructure\\configurations\\viagemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\models\\viagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\models\\viagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\veiculohandler\\commands\\excluirveiculo\\excluirveiculohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\veiculohandler\\commands\\excluirveiculo\\excluirveiculohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\veiculohandler\\commands\\excluirveiculo\\excluirveiculocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\veiculohandler\\commands\\excluirveiculo\\excluirveiculocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\controllers\\viagemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\controllers\\viagemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\controllers\\entregacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\controllers\\entregacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\entregahandler\\commands\\confirmarentrega\\confirmarentregacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\entregahandler\\commands\\confirmarentrega\\confirmarentregacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RotaCerta.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:43:35.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ResponseLogin.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:41:23.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ObterViagemPorIdHandler.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:15:01.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VeiculoResumidoDto.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:14:44.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ObterViagemPorIdQuery.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:13:06.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EntregaDto.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\EntregaDto.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\EntregaDto.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\EntregaDto.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Dtos\\EntregaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:10:21.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ViagemDto.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\ViagemDto.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\ViagemDto.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\ViagemDto.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Dtos\\ViagemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:09:48.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginUser.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
+              "RelativeToolTip": "RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAuwDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:46:32.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:44:59.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Program.cs",
+              "RelativeDocumentMoniker": "RotaCerta.API\\Program.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Program.cs",
+              "RelativeToolTip": "RotaCerta.API\\Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:32:55.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ObterVeiculoPorIdHandler.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwEEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:02:58.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VeiculoComAlertaDto.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
+              "RelativeToolTip": "RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T02:00:33.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViagemConfiguration.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
+              "RelativeToolTip": "RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAgwJgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:54:51.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Veiculo.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\Models\\Veiculo.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Veiculo.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\Models\\Veiculo.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:52:52.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VeiculoRepository.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
+              "RelativeToolTip": "RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:45:24.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VeiculoController.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\VeiculoController.cs",
+              "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\VeiculoController.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\VeiculoController.cs",
+              "RelativeToolTip": "RotaCerta.API\\Controllers\\VeiculoController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:38:16.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ExcluirVeiculoHandler.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
+              "RelativeToolTip": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:37:46.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ExcluirVeiculoCommand.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
+              "RelativeToolTip": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T01:37:16.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EntregaController.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\EntregaController.cs",
+              "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\EntregaController.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\EntregaController.cs",
+              "RelativeToolTip": "RotaCerta.API\\Controllers\\EntregaController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T00:18:54.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ConfirmarEntregaCommand.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
+              "RelativeToolTip": "RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T00:18:46.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ViagemController.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\ViagemController.cs",
+              "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\ViagemController.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\ViagemController.cs",
+              "RelativeToolTip": "RotaCerta.API\\Controllers\\ViagemController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowDQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T00:13:04.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Viagem.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Viagem.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\Models\\Viagem.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Viagem.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\Models\\Viagem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHUAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T23:59:47.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

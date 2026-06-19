@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="RotaCerta.API/RotaCerta.API.csproj" />
+  <Project Path="RotaCerta.Application/RotaCerta.Application.csproj" />
+  <Project Path="RotaCerta.Domain/RotaCerta.Domain.csproj" />
+  <Project Path="RotaCerta.Extensions/RotaCerta.Extensions.csproj" />
+  <Project Path="RotaCerta.Infraestructure/RotaCerta.Infraestructure.csproj" />
+</Solution>

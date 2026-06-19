@@ -1,0 +1,17 @@
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Infrastructure.deps.json
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Infrastructure.runtimeconfig.json
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Infrastructure.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Infrastructure.pdb
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Domain.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\bin\Debug\net10.0\RotaCerta.Domain.pdb
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.csproj.AssemblyReference.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.AssemblyInfoInputs.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.AssemblyInfo.cs
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.csproj.CoreCompileInputs.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCert.86CE7CDD.Up2Date
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\refint\RotaCerta.Infrastructure.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.pdb
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\RotaCerta.Infrastructure.genruntimeconfig.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Infraestructure\obj\Debug\net10.0\ref\RotaCerta.Infrastructure.dll

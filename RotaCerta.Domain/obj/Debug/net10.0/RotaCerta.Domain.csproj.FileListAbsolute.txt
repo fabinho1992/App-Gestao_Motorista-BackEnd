@@ -1,0 +1,12 @@
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\bin\Debug\net10.0\RotaCerta.Domain.deps.json
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\bin\Debug\net10.0\RotaCerta.Domain.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\bin\Debug\net10.0\RotaCerta.Domain.pdb
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.csproj.AssemblyReference.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.AssemblyInfoInputs.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.AssemblyInfo.cs
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.csproj.CoreCompileInputs.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\refint\RotaCerta.Domain.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\RotaCerta.Domain.pdb
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Domain\obj\Debug\net10.0\ref\RotaCerta.Domain.dll
