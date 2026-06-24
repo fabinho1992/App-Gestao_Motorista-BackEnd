@@ -17,3 +17,4 @@ D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\De
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\refint\RotaCerta.Extensions.dll
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.pdb
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\ref\RotaCerta.Extensions.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.sourcelink.json

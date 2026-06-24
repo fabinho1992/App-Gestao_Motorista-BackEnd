@@ -40,6 +40,25 @@ public class Motorista : BaseEntity
         return motorista;
     }
 
+    // --- update ---
+
+    public void Atualizar(
+        string nome,
+        string cpf,
+        string email,
+        string telefone,
+        string cnh,
+        DateOnly vencimentoCnh)
+    {
+        Nome = nome;
+        Cpf = cpf;
+        Email = email;
+        Telefone = telefone;
+        Cnh = cnh;
+        VencimentoCnh = vencimentoCnh;
+        MarcarComoAtualizado();
+    }
+
     // --- métodos ---
 
     /// <summary>

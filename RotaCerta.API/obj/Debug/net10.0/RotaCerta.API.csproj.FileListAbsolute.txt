@@ -141,3 +141,4 @@ D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.pdb
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.genruntimeconfig.cache
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\ref\RotaCerta.API.dll
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.sourcelink.json

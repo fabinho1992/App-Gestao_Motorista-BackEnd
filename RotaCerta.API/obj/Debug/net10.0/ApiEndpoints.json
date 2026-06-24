@@ -260,6 +260,85 @@
     ]
   },
   {
+    "ContainingType": "RotaCerta.API.Controllers.MotoristaController",
+    "Method": "Atualizar",
+    "RelativePath": "api/v1/motorista",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "RotaCerta.Application.MotoristaHandler.Commands.AtualizarMotorista.AtualizarMotoristaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.MotoristaController",
+    "Method": "ObterPorId",
+    "RelativePath": "api/v1/motorista/perfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel\u00601[[RotaCerta.Application.Dtos.VeiculoComAlertaDto, RotaCerta.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
     "ContainingType": "RotaCerta.API.Controllers.VeiculoController",
     "Method": "Criar",
     "RelativePath": "api/v1/veiculo",
