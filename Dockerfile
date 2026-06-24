@@ -3,14 +3,15 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore RotaCerta.Api/RotaCerta.Api.csproj
-RUN dotnet publish RotaCerta.Api/RotaCerta.Api.csproj -c Release -o /app/publish
+RUN dotnet restore RotaCerta.API/RotaCerta.API.csproj
+
+RUN dotnet publish RotaCerta.API/RotaCerta.API.csproj -c Release -o /app/publish
+
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
+
 WORKDIR /app
 
 COPY --from=build /app/publish .
 
-EXPOSE 8080
-
-ENTRYPOINT ["dotnet", "RotaCerta.Api.dll"]
+ENTRYPOINT ["dotnet", "RotaCerta.API.dll"]
