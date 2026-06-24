@@ -5,6 +5,8 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://+:8080");
+
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
