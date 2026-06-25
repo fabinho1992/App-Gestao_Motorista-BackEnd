@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\UserSecrets\\174cfa72-33ea-4554-a769-abf7150dced5\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAEF1F10-D45B-4F93-B992-12AED4D15D9B}|RotaCerta.API\\RotaCerta.API.csproj|solutionrelative:rotacerta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -106,7 +109,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +117,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\UserSecrets\\174cfa72-33ea-4554-a769-abf7150dced5\\secrets.json",
+              "ToolTip": "C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\UserSecrets\\174cfa72-33ea-4554-a769-abf7150dced5\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-24T01:05:44.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ObterMotoristaPorIdQuery.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Motorista\\ObterMotoristaPorIdQuery.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Motorista\\ObterMotoristaPorIdQuery.cs",
@@ -126,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MotoristaController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\MotoristaController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\MotoristaController.cs",
@@ -138,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\AuthController.cs",
@@ -150,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ResponseLogin.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
               "RelativeDocumentMoniker": "RotaCerta.Domain\\ModelsAuthentication\\ResponseLogin.cs",
@@ -162,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ObterViagemPorIdHandler.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdHandler.cs",
@@ -174,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "VeiculoResumidoDto.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\VeiculoResumidoDto.cs",
@@ -186,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ObterViagemPorIdQuery.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Viagem\\ObterViagemPorIdQuery.cs",
@@ -198,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "EntregaDto.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\EntregaDto.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\EntregaDto.cs",
@@ -210,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ViagemDto.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\ViagemDto.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\ViagemDto.cs",
@@ -222,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LoginUser.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
               "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Services\\AuthService\\LoginUser.cs",
@@ -234,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
               "RelativeDocumentMoniker": "RotaCerta.Domain\\ModelsAuthentication\\Login.cs",
@@ -246,20 +260,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Program.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Program.cs",
               "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Program.cs",
               "RelativeToolTip": "RotaCerta.API\\Program.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-19T02:32:55.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ObterVeiculoPorIdHandler.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Queries\\Veiculo\\ObterVeiculoPorIdHandler.cs",
@@ -271,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "VeiculoComAlertaDto.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\Dtos\\VeiculoComAlertaDto.cs",
@@ -283,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ViagemConfiguration.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
               "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Configurations\\ViagemConfiguration.cs",
@@ -295,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Veiculo.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Veiculo.cs",
               "RelativeDocumentMoniker": "RotaCerta.Domain\\Models\\Veiculo.cs",
@@ -307,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "VeiculoRepository.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
               "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Repository\\VeiculoRepository.cs",
@@ -319,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "VeiculoController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\VeiculoController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\VeiculoController.cs",
@@ -327,12 +341,11 @@
               "RelativeToolTip": "RotaCerta.API\\Controllers\\VeiculoController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T01:38:16.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T01:38:16.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ExcluirVeiculoHandler.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoHandler.cs",
@@ -344,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ExcluirVeiculoCommand.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\VeiculoHandler\\Commands\\ExcluirVeiculo\\ExcluirVeiculoCommand.cs",
@@ -356,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "EntregaController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\EntregaController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\EntregaController.cs",
@@ -368,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ConfirmarEntregaCommand.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
@@ -380,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ViagemController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\ViagemController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\ViagemController.cs",
@@ -392,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Viagem.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Models\\Viagem.cs",
               "RelativeDocumentMoniker": "RotaCerta.Domain\\Models\\Viagem.cs",
