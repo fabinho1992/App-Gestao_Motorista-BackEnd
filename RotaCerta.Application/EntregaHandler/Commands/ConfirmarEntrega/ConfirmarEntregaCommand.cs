@@ -4,4 +4,4 @@ using Microsoft.AspNetCore.Http;
 
 namespace RotaCerta.Application.EntregaHandler.Commands.ConfirmarEntrega;
 
-public record ConfirmarEntregaCommand(Guid EntregaId, List<IFormFile>? Fotos) : IRequest<ResultViewModel>;
+public record ConfirmarEntregaCommand(Guid EntregaId, IFormFileCollection? Fotos) : IRequest<ResultViewModel>;

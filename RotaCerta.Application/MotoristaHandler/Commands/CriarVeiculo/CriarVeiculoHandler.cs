@@ -26,6 +26,8 @@ public class CriarVeiculoHandler : IRequestHandler<CriarVeiculoCommand, ResultVi
             if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
                 return ResultViewModel<Guid>.Error("Usuário não autenticado.");
 
+            Console.WriteLine($"MotoristaId: {motoristaId}");
+
             var motorista = await _unitOfWork.MotoristaRepository
                 .GetByIdAsync(motoristaId, cancellationToken);
 

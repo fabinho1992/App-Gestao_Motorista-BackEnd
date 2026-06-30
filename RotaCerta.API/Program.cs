@@ -1,11 +1,10 @@
 using Microsoft.OpenApi;
 using RotaCerta.Extensions;
 using Scalar.AspNetCore;
+using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.WebHost.UseUrls("http://+:8080");
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -72,19 +71,19 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+var portaRender = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(portaRender))
+{
+    builder.WebHost.UseUrls($"http://+:{portaRender}");
+}
+
+// ... resto das configurações ...
+
 app.UseCors("RotaCertaFront");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-var port = Environment.GetEnvironmentVariable("PORT");
+app.Run(); // ← só isso no final
 
-if (!string.IsNullOrWhiteSpace(port))
-{
-    app.Run($"http://0.0.0.0:{port}");
-}
-else
-{
-    app.Run();
-}

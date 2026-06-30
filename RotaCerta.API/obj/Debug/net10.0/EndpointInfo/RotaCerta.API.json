@@ -315,15 +315,12 @@
         ],
         "requestBody": {
           "content": {
-            "application/x-www-form-urlencoded": {
+            "multipart/form-data": {
               "schema": {
                 "type": "object",
                 "properties": {
                   "fotos": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/IFormFile"
-                    }
+                    "$ref": "#/components/schemas/IFormFileCollection"
                   }
                 }
               }
@@ -333,44 +330,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultViewModel"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -1156,6 +1116,86 @@
         }
       }
     },
+    "/api/v1/viagem/{id}/status-pagamento": {
+      "put": {
+        "tags": [
+          "Viagem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarStatusPagamentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarStatusPagamentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarStatusPagamentoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultViewModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/viagem/{id}": {
       "get": {
         "tags": [
@@ -1357,6 +1397,17 @@
           "vencimentoCnh": {
             "type": "string",
             "format": "date"
+          }
+        }
+      },
+      "AtualizarStatusPagamentoRequest": {
+        "required": [
+          "novoStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "novoStatus": {
+            "$ref": "#/components/schemas/StatusPagamento"
           }
         }
       },
@@ -1579,6 +1630,12 @@
       "IFormFile": {
         "type": "string",
         "format": "binary"
+      },
+      "IFormFileCollection": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IFormFile"
+        }
       },
       "Login": {
         "required": [
@@ -2114,6 +2171,9 @@
       "StatusEntrega": {
         "type": "integer"
       },
+      "StatusPagamento": {
+        "type": "integer"
+      },
       "StatusViagem": {
         "type": "integer"
       },
@@ -2317,6 +2377,9 @@
           },
           "pago": {
             "type": "boolean"
+          },
+          "statusPagamento": {
+            "$ref": "#/components/schemas/StatusPagamento"
           },
           "status": {
             "$ref": "#/components/schemas/StatusViagem"

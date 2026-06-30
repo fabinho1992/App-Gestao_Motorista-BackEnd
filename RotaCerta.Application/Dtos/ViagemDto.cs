@@ -16,6 +16,7 @@ namespace RotaCerta.Application.Dtos
         public double ValorFrete { get; set; }
         public string FormaPagamento { get; set; } = string.Empty;
         public bool Pago { get; set; }
+        public string StatusPagamento { get; set; } = string.Empty;
         public string Status { get; set; } = string.Empty;
         public double GastoCombustivel { get; set; }
         public double GastoPedagio { get; set; }

@@ -4,10 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using RotaCerta.Application.Dtos;
 using RotaCerta.Application.Queries.Viagem;
 using RotaCerta.Application.ViagemHandler.Commands.AbrirViagem;
+using RotaCerta.Application.ViagemHandler.Commands.AtualizarStatusPagamento;
 using RotaCerta.Application.ViagemHandler.Commands.EncerrarViagem;
 using RotaCerta.Domain.Enums;
 
 namespace RotaCerta.API.Controllers;
+
+public record AtualizarStatusPagamentoRequest(StatusPagamento NovoStatus);
 
 /// <summary>
 /// Gerencia as viagens do motorista autenticado.
@@ -78,6 +81,23 @@ public class ViagemController : ControllerBase
             PageSize = pageSize
         };
         var result = await _mediator.Send(query, ct);
+        return result.IsSuccess ? Ok(result) : BadRequest(result);
+    }
+
+    /// <summary>Atualiza o status de pagamento de uma viagem.</summary>
+    /// <response code="200">Status atualizado com sucesso</response>
+    /// <response code="400">Erro de validacao</response>
+    /// <response code="401">Nao autorizado</response>
+    [HttpPut("{id}/status-pagamento")]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> AtualizarStatusPagamento(
+        Guid id,
+        [FromBody] AtualizarStatusPagamentoRequest request,
+        CancellationToken ct)
+    {
+        var command = new AtualizarStatusPagamentoCommand(id, request.NovoStatus);
+        var result = await _mediator.Send(command, ct);
         return result.IsSuccess ? Ok(result) : BadRequest(result);
     }
 

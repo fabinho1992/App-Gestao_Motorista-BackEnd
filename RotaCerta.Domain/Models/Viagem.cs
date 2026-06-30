@@ -21,6 +21,7 @@ public class Viagem : BaseEntity
     public double ValorFrete { get; private set; }
     public FormaPagamento FormaPagamento { get; private set; }
     public bool Pago { get; private set; }
+    public StatusPagamento StatusPagamento { get; private set; } = StatusPagamento.Pendente;
     public StatusViagem Status { get; private set; } = StatusViagem.Aberta;
 
     // entregas feitas durante a viagem
@@ -151,6 +152,12 @@ public class Viagem : BaseEntity
     public void RegistrarPagamento()
     {
         Pago = true;
+        MarcarComoAtualizado();
+    }
+
+    public void AtualizarStatusPagamento(StatusPagamento novoStatus)
+    {
+        StatusPagamento = novoStatus;
         MarcarComoAtualizado();
     }
 

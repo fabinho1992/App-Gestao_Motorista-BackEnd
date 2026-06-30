@@ -44,6 +44,7 @@ public class ObterViagemPorIdHandler : IRequestHandler<ObterViagemPorIdQuery, Re
             ValorFrete = viagem.ValorFrete,
             FormaPagamento = viagem.FormaPagamento.ToString(),
             Pago = viagem.Pago,
+            StatusPagamento = viagem.StatusPagamento.ToString(),
             Status = viagem.Status.ToString(),
             GastoCombustivel = viagem.GastoCombustivel,
             GastoPedagio = viagem.GastoPedagio,

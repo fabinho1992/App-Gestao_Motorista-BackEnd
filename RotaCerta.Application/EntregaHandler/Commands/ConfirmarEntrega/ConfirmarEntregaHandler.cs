@@ -27,6 +27,15 @@ public class ConfirmarEntregaHandler : IRequestHandler<ConfirmarEntregaCommand, 
     {
         try
         {
+            Console.WriteLine($"Fotos recebidas: {request.Fotos?.Count ?? 0}");
+            if (request.Fotos != null)
+            {
+                foreach (var foto in request.Fotos)
+                {
+                    Console.WriteLine($"Foto: {foto.FileName} | {foto.ContentType} | {foto.Length} bytes");
+                }
+            }
+
             if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
                 return ResultViewModel.Error("Usuário não autenticado.");
 
@@ -81,6 +90,10 @@ public class ConfirmarEntregaHandler : IRequestHandler<ConfirmarEntregaCommand, 
         {
             return ResultViewModel.Error(ex.Message);
         }
+        catch (Exception ex)  // ← adiciona esse
+        {
+            return ResultViewModel.Error($"Erro inesperado: {ex.Message}");
+        }
     }
 
     private static (bool IsValida, string Mensagem) ValidarImagem(IFormFile imagem)
@@ -93,6 +106,8 @@ public class ConfirmarEntregaHandler : IRequestHandler<ConfirmarEntregaCommand, 
         var tamanhoMaximo = 5 * 1024 * 1024; // 5MB
         if (imagem.Length > tamanhoMaximo)
             return (false, "Imagem não pode ter mais que 5MB.");
+
+        Console.WriteLine($"Imagem válida: {imagem.FileName}, Tipo: {imagem.ContentType}, Tamanho: {imagem.Length} bytes");
 
         return (true, string.Empty);
     }

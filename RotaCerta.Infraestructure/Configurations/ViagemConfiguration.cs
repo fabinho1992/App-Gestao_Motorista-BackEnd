@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RotaCerta.Domain.Enums;
 using RotaCerta.Domain.Models;
 using RotaCerta.Domain.Viagens;
 
@@ -85,6 +86,13 @@ public class ViagemConfiguration : IEntityTypeConfiguration<Viagem>
         builder.Property(v => v.Pago)
             .HasColumnName("pago")
             .HasDefaultValue(false)
+            .IsRequired();
+
+        builder.Property(v => v.StatusPagamento)
+            .HasColumnName("status_pagamento")
+            .HasConversion<string>()
+            .HasMaxLength(20)
+            .HasDefaultValue(StatusPagamento.Pendente)
             .IsRequired();
 
         builder.Property(v => v.Status)

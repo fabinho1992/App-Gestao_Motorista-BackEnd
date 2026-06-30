@@ -47,9 +47,7 @@ public class EntregaController : ControllerBase
     /// <response code="401">Nao autorizado</response>
     [HttpPut("{id}/confirmar")]
     [Consumes("multipart/form-data")]
-    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Confirmar(Guid id, [FromForm] List<IFormFile>? fotos)
+    public async Task<IActionResult> Confirmar(Guid id, IFormFileCollection? fotos)
     {
         var command = new ConfirmarEntregaCommand(id, fotos);
         var result = await _mediator.Send(command);
