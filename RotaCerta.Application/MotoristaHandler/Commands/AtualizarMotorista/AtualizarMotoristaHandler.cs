@@ -1,7 +1,9 @@
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using RotaCerta.Application.Dtos;
 using RotaCerta.Domain.Common;
 using RotaCerta.Domain.Services;
+using RotaCerta.Infraestructure.Context.Identity;
 
 namespace RotaCerta.Application.MotoristaHandler.Commands.AtualizarMotorista;
 
@@ -9,13 +11,16 @@ public class AtualizarMotoristaHandler : IRequestHandler<AtualizarMotoristaComma
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUsuarioContext _usuarioContext;
+    private readonly UserManager<ApplicationUser> _userManager;
 
     public AtualizarMotoristaHandler(
         IUnitOfWork unitOfWork,
-        IUsuarioContext usuarioContext)
+        IUsuarioContext usuarioContext,
+        UserManager<ApplicationUser> userManager)
     {
         _unitOfWork = unitOfWork;
         _usuarioContext = usuarioContext;
+        _userManager = userManager;
     }
 
     public async Task<ResultViewModel> Handle(
@@ -55,6 +60,22 @@ public class AtualizarMotoristaHandler : IRequestHandler<AtualizarMotoristaComma
 
             await _unitOfWork.MotoristaRepository.UpdateAsync(motorista, cancellationToken);
             await _unitOfWork.CommitAsync(cancellationToken);
+
+
+            var usuario = await _userManager.FindByIdAsync(
+               _usuarioContext.MotoristaId ?? motoristaId.ToString());
+
+            if (usuario is not null)
+            {
+                usuario.DisplayName = request.Nome;
+                usuario.Email = request.Email;
+                usuario.UserName = request.Email;
+                usuario.NormalizedEmail = request.Email.ToUpperInvariant();
+                usuario.NormalizedUserName = request.Email.ToUpperInvariant();
+
+                await _userManager.UpdateAsync(usuario);
+            }
+
 
             return ResultViewModel.Success();
         }

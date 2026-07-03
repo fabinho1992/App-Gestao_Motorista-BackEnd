@@ -411,7 +411,8 @@
       "RotaCerta.Application/1.0.0": {
         "dependencies": {
           "MediatR": "14.1.0",
-          "RotaCerta.Domain": "1.0.0"
+          "RotaCerta.Domain": "1.0.0",
+          "RotaCerta.Infraestructure": "1.0.0"
         },
         "runtime": {
           "RotaCerta.Application.dll": {

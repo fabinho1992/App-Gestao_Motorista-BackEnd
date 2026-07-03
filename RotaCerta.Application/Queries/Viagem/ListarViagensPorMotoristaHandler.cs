@@ -24,7 +24,7 @@ public class ListarViagensPorMotoristaHandler : IRequestHandler<ListarViagensPor
             return ResultViewModel<List<Domain.Viagens.Viagem>>.Error("Usuário não autenticado.");
 
         var (items, totalPaginas, totalCount) = await _unitOfWork.ViagemRepository
-            .GetByMotoristaIdAsync(motoristaId, request.Status, request.PageNumber, request.PageSize, cancellationToken);
+            .GetByMotoristaIdAsync(motoristaId, request.Status, request.DataInicio, request.DataFim, request.EmpresaContratante, request.PageNumber, request.PageSize, cancellationToken);
 
         if (items is null || !items.Any())
             return ResultViewModel<List<Domain.Viagens.Viagem>>.Error("Nenhuma viagem encontrada.");

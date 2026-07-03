@@ -24,8 +24,9 @@ public interface IVeiculoRepository
 public interface IViagemRepository
 {
     Task<Viagem?> GetByIdAsync(Guid id, CancellationToken ct = default);
-    Task<(List<Viagem> Items, int TotalPaginas, int TotalCount)> GetByMotoristaIdAsync(Guid motoristaId, StatusViagem? status, int pageNumber, int pageSize, CancellationToken ct = default);
+    Task<(List<Viagem> Items, int TotalPaginas, int TotalCount)> GetByMotoristaIdAsync(Guid motoristaId, StatusViagem? status, DateOnly? dataInicio, DateOnly? dataFim, string? empresaContratante, int pageNumber, int pageSize, CancellationToken ct = default);
     Task<List<Viagem>> GetByMotoristaIdMesAsync(Guid motoristaId, int mes, int ano, CancellationToken ct = default);
+    Task<List<string>> GetEmpresasDistintasAsync(Guid motoristaId, CancellationToken ct = default);
     Task AddAsync(Viagem viagem, CancellationToken ct = default);
     Task UpdateAsync(Viagem viagem, CancellationToken ct = default);
 }

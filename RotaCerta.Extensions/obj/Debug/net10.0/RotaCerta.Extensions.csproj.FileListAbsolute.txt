@@ -12,9 +12,9 @@ D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\De
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.AssemblyInfoInputs.cache
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.AssemblyInfo.cs
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.csproj.CoreCompileInputs.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.sourcelink.json
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCert.6F5CDA22.Up2Date
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.dll
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\refint\RotaCerta.Extensions.dll
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.pdb
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\ref\RotaCerta.Extensions.dll
-D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.Extensions\obj\Debug\net10.0\RotaCerta.Extensions.sourcelink.json

@@ -125,6 +125,7 @@ D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.csproj.CoreCompileInputs.cache
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.MvcApplicationPartsAssemblyInfo.cs
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.MvcApplicationPartsAssemblyInfo.cache
+D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.sourcelink.json
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -141,4 +142,3 @@ D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.pdb
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.genruntimeconfig.cache
 D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\ref\RotaCerta.API.dll
-D:\AulasAluraBackEnd\App_ControleMotorista\RotaCerta\RotaCerta.API\obj\Debug\net10.0\RotaCerta.API.sourcelink.json

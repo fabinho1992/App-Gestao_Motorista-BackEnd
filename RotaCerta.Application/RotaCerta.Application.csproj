@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RotaCerta.Domain\RotaCerta.Domain.csproj" />
+    <ProjectReference Include="..\RotaCerta.Infraestructure\RotaCerta.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>

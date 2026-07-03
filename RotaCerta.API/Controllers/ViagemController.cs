@@ -70,6 +70,9 @@ public class ViagemController : ControllerBase
     [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Listar(
         [FromQuery] StatusViagem? status,
+        [FromQuery] DateOnly? dataInicio,
+        [FromQuery] DateOnly? dataFim,
+        [FromQuery] string? empresaContratante,
         [FromQuery] int pageNumber = 1,
         [FromQuery] int pageSize = 10,
         CancellationToken ct = default)
@@ -77,10 +80,26 @@ public class ViagemController : ControllerBase
         var query = new ListarViagensPorMotoristaQuery
         {
             Status = status,
+            DataInicio = dataInicio,
+            DataFim = dataFim,
+            EmpresaContratante = empresaContratante,
             PageNumber = pageNumber,
             PageSize = pageSize
         };
         var result = await _mediator.Send(query, ct);
+        return result.IsSuccess ? Ok(result) : BadRequest(result);
+    }
+
+    /// <summary>Lista as empresas contratantes distintas já usadas pelo motorista, para sugestao de busca.</summary>
+    /// <response code="200">Lista de empresas retornada com sucesso</response>
+    /// <response code="400">Erro de validacao</response>
+    /// <response code="401">Nao autorizado</response>
+    [HttpGet("empresas")]
+    [ProducesResponseType(typeof(ResultViewModel<List<string>>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> ObterEmpresas(CancellationToken ct)
+    {
+        var result = await _mediator.Send(new ObterEmpresasDistintasQuery(), ct);
         return result.IsSuccess ? Ok(result) : BadRequest(result);
     }
 

@@ -15,7 +15,7 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
             .FirstOrDefaultAsync(v => v.Id == id, ct);
 
     public async Task<(List<Viagem> Items, int TotalPaginas, int TotalCount)> GetByMotoristaIdAsync(
-        Guid motoristaId, StatusViagem? status, int pageNumber, int pageSize, CancellationToken ct = default)
+        Guid motoristaId, StatusViagem? status, DateOnly? dataInicio, DateOnly? dataFim, string? empresaContratante, int pageNumber, int pageSize, CancellationToken ct = default)
     {
         var query = context.Viagens
             .Include(v => v.Entregas)
@@ -24,12 +24,24 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
         if (status.HasValue)
             query = query.Where(v => v.Status == status.Value);
 
+        if (dataInicio.HasValue)
+            query = query.Where(v => v.DataSaida >= dataInicio.Value);
+
+        if (dataFim.HasValue)
+            query = query.Where(v => v.DataSaida <= dataFim.Value);
+
+        if (!string.IsNullOrWhiteSpace(empresaContratante))
+            query = query.Where(v =>
+                v.EmpresaContratante.ToLower()
+                 .Contains(empresaContratante.ToLower()));
+
         var totalCount = await query.CountAsync(ct);
         var totalPaginas = (int)Math.Ceiling((double)totalCount / pageSize);
         var items = await query
             .OrderByDescending(v => v.DataSaida)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
+            .OrderByDescending(v => v.CriadoEm)
             .ToListAsync(ct);
 
         return (items, totalPaginas, totalCount);
@@ -43,6 +55,15 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
                 v.MotoristaId == motoristaId &&
                 v.DataSaida.Month == mes &&
                 v.DataSaida.Year == ano)
+            .ToListAsync(ct);
+
+    public async Task<List<string>> GetEmpresasDistintasAsync(
+        Guid motoristaId, CancellationToken ct = default)
+        => await context.Viagens
+            .Where(v => v.MotoristaId == motoristaId)
+            .Select(v => v.EmpresaContratante)
+            .Distinct()
+            .OrderBy(e => e)
             .ToListAsync(ct);
 
     public async Task AddAsync(Viagem viagem, CancellationToken ct = default)
