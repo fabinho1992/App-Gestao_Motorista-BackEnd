@@ -57,6 +57,18 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
                 v.DataSaida.Year == ano)
             .ToListAsync(ct);
 
+    public async Task<List<Viagem>> GetViagensEncerradasPorMesAsync(
+        Guid motoristaId, int mes, int ano, CancellationToken ct = default)
+        => await context.Viagens
+            .Where(v =>
+                v.MotoristaId == motoristaId &&
+                v.Status == StatusViagem.Encerrada &&
+                v.DataFim.HasValue &&
+                v.DataFim.Value.Month == mes &&
+                v.DataFim.Value.Year == ano)
+            .OrderBy(v => v.DataFim)
+            .ToListAsync(ct);
+
     public async Task<List<string>> GetEmpresasDistintasAsync(
         Guid motoristaId, CancellationToken ct = default)
         => await context.Viagens
@@ -65,6 +77,14 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
             .Distinct()
             .OrderBy(e => e)
             .ToListAsync(ct);
+
+    public async Task<List<Viagem>> GetViagensAtivasPorMotoristaAsync(Guid motoristaId, CancellationToken ct = default)
+    => await context.Viagens
+        .Where(v =>
+            v.MotoristaId == motoristaId &&
+            (v.Status == StatusViagem.Aberta ||
+             v.Status == StatusViagem.EmRota))
+        .ToListAsync(ct);
 
     public async Task AddAsync(Viagem viagem, CancellationToken ct = default)
         => await context.Viagens.AddAsync(viagem, ct);

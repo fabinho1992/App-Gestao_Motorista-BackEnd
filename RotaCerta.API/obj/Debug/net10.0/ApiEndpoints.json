@@ -71,6 +71,46 @@
   },
   {
     "ContainingType": "RotaCerta.API.Controllers.DashboardController",
+    "Method": "RelatorioCombustivel",
+    "RelativePath": "api/v1/dashboard/relatorio-combustivel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mes",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ano",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel\u00601[[RotaCerta.Application.Dtos.RelatorioCombustivelDto, RotaCerta.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "RotaCerta.Application.Dtos.ResultViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.DashboardController",
     "Method": "Resumo",
     "RelativePath": "api/v1/dashboard/resumo",
     "HttpMethod": "GET",

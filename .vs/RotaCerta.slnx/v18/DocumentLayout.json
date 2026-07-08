@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.application\\viagemhandler\\commands\\abrirviagem\\abrirviagemhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1149EB5-BC54-7D8F-D31C-CE70BC10468B}|RotaCerta.Application\\RotaCerta.Application.csproj|solutionrelative:rotacerta.application\\viagemhandler\\commands\\abrirviagem\\abrirviagemhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\common\\iaddresszipcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\common\\iaddresszipcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.domain\\common\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B114F57D-FD92-EB70-E3CB-025B64F2DBF4}|RotaCerta.Domain\\RotaCerta.Domain.csproj|solutionrelative:rotacerta.domain\\common\\interfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|d:\\aulasalurabackend\\app_controlemotorista\\rotacerta\\rotacerta.infraestructure\\repository\\viagemrepositoty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9FC0FF-E764-0509-1897-89491670DF1E}|RotaCerta.Infraestructure\\RotaCerta.Infraestructure.csproj|solutionrelative:rotacerta.infraestructure\\repository\\viagemrepositoty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,32 +57,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ViagemRepositoty.cs",
-              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
-              "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
-              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
-              "RelativeToolTip": "RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAmwCsAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IAddressZipCode.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Common\\IAddressZipCode.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\Common\\IAddressZipCode.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Common\\IAddressZipCode.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\Common\\IAddressZipCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T01:18:47.919Z",
+              "WhenOpened": "2026-07-08T11:35:57.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AtualizarMotoristaHandler.cs",
-              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
-              "RelativeDocumentMoniker": "RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
-              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
-              "RelativeToolTip": "RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAqwEkAAABOAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Interfaces.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Common\\Interfaces.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Domain\\Common\\Interfaces.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Domain\\Common\\Interfaces.cs",
+              "RelativeToolTip": "RotaCerta.Domain\\Common\\Interfaces.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T23:19:33.156Z",
+              "WhenOpened": "2026-07-08T10:42:41.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AbrirViagemHandler.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
+              "RelativeToolTip": "RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T10:34:56.13Z",
               "EditorCaption": ""
             },
             {
@@ -83,7 +108,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViagemRepositoty.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
+              "RelativeToolTip": "RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwFAAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T01:18:47.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AtualizarMotoristaHandler.cs",
+              "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
+              "RelativeDocumentMoniker": "RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
+              "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
+              "RelativeToolTip": "RotaCerta.Application\\MotoristaHandler\\Commands\\AtualizarMotorista\\AtualizarMotoristaHandler.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAqwEkAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T23:19:33.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ConfirmarEntregaCommand.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaCommand.cs",
@@ -95,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ConfirmarEntregaHandler.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaHandler.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\EntregaHandler\\Commands\\ConfirmarEntrega\\ConfirmarEntregaHandler.cs",
@@ -107,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CriarVeiculoHandler.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\MotoristaHandler\\Commands\\CriarVeiculo\\CriarVeiculoHandler.cs",
               "RelativeDocumentMoniker": "RotaCerta.Application\\MotoristaHandler\\Commands\\CriarVeiculo\\CriarVeiculoHandler.cs",
@@ -119,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "20260629234059_Adicionando StatusPagamento.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Infraestructure\\Migrations\\20260629234059_Adicionando StatusPagamento.cs",
               "RelativeDocumentMoniker": "RotaCerta.Infraestructure\\Migrations\\20260629234059_Adicionando StatusPagamento.cs",
@@ -131,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "EntregaController.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Controllers\\EntregaController.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Controllers\\EntregaController.cs",
@@ -143,18 +193,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\UserSecrets\\174cfa72-33ea-4554-a769-abf7150dced5\\secrets.json",
               "ToolTip": "C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\UserSecrets\\174cfa72-33ea-4554-a769-abf7150dced5\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-25T23:40:02.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-25T23:40:02.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.API\\Program.cs",
               "RelativeDocumentMoniker": "RotaCerta.API\\Program.cs",

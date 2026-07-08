@@ -41,4 +41,25 @@ public class DashboardController : ControllerBase
         var result = await _mediator.Send(query, ct);
         return result.IsSuccess ? Ok(result) : BadRequest(result);
     }
+
+    /// <summary>Retorna o relatório mensal de gastos de combustível.</summary>
+    /// <response code="200">Relatório retornado com sucesso</response>
+    /// <response code="400">Erro de validação</response>
+    /// <response code="401">Não autorizado</response>
+    [HttpGet("relatorio-combustivel")]
+    [ProducesResponseType(typeof(ResultViewModel<RelatorioCombustivelDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> RelatorioCombustivel(
+        [FromQuery] int mes = 0,
+        [FromQuery] int ano = 0,
+        CancellationToken ct = default)
+    {
+        var hoje = DateOnly.FromDateTime(DateTime.Today);
+        var query = new ObterRelatorioCombustivelQuery(
+            mes == 0 ? hoje.Month : mes,
+            ano == 0 ? hoje.Year : ano);
+
+        var result = await _mediator.Send(query, ct);
+        return result.IsSuccess ? Ok(result) : BadRequest(result);
+    }
 }

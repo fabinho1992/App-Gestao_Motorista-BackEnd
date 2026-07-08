@@ -1,6 +1,7 @@
 using MediatR;
 using RotaCerta.Application.Dtos;
 using RotaCerta.Domain.Common;
+using RotaCerta.Domain.Enums;
 using RotaCerta.Domain.Services;
 using RotaCerta.Domain.Viagens;
 
@@ -26,17 +27,29 @@ public class AbrirViagemHandler : IRequestHandler<AbrirViagemCommand, ResultView
             if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
                 return ResultViewModel<Guid>.Error("Usuário não autenticado.");
 
-            // carrega motorista com seus veículos
             var motorista = await _unitOfWork.MotoristaRepository
                 .GetByIdAsync(motoristaId, cancellationToken);
 
             if (motorista is null)
                 return ResultViewModel<Guid>.Error("Motorista não encontrado.");
 
-            var veiculo = motorista.Veiculos.FirstOrDefault(v => v.Id == request.VeiculoId);
+            var veiculo = motorista.Veiculos
+                .FirstOrDefault(v => v.Id == request.VeiculoId);
 
             if (veiculo is null)
-                return ResultViewModel<Guid>.Error("Veículo não encontrado ou não pertence ao motorista.");
+                return ResultViewModel<Guid>.Error(
+                    "Veículo não encontrado ou não pertence ao motorista.");
+
+            var viagensAtivas = await _unitOfWork.ViagemRepository
+            .GetViagensAtivasPorMotoristaAsync(motoristaId, cancellationToken);
+
+            // verifica se alguma viagem ativa usa o veículo solicitado
+            var veiculoEmUso = viagensAtivas.Any(v => v.VeiculoId == request.VeiculoId);
+
+            if (veiculoEmUso)
+                return ResultViewModel<Guid>.Error(
+                    "Este veículo já possui uma viagem em andamento. " +
+                    "Encerre a viagem atual antes de abrir uma nova com este veículo.");
 
             var viagem = Viagem.Abrir(
                 motorista,
