@@ -33,6 +33,13 @@ public class ObterResumoDashboardHandler : IRequestHandler<ObterResumoDashboardQ
                         v.StatusPagamento == StatusPagamento.Pago)
             .ToList();
 
+        // ← filtra encerradas e pendentes de pagamento
+        var viagensPendentes = viagens
+            .Where(v =>
+                v.Status == StatusViagem.Encerrada &&
+                v.StatusPagamento == StatusPagamento.Pendente)
+            .ToList();
+
         var viagemAtiva = viagens.FirstOrDefault(v =>
             v.Status == StatusViagem.Aberta ||
             v.Status == StatusViagem.EmRota);
@@ -57,7 +64,13 @@ public class ObterResumoDashboardHandler : IRequestHandler<ObterResumoDashboardQ
             ViagemAtivaEmpresa = viagemAtiva?.EmpresaContratante,
             ViagemAtivaStatus = viagemAtiva?.Status.ToString(),
             EntregasConcluidasAtiva = viagemAtiva?.TotalEntregasRealizadas ?? 0,
-            TotalEntregasAtiva = viagemAtiva?.Entregas.Count ?? 0
+            TotalEntregasAtiva = viagemAtiva?.Entregas.Count ?? 0,
+
+            // ← usa viagensPendentes para resumo do que falta receber
+            TotalAReceber = viagensPendentes.Sum(v => v.ValorFrete),
+            ViagensPendentePagamento = viagensPendentes.Count,
+            TotalGastosPendentes = viagensPendentes.Sum(v => v.TotalGastos),
+            LucroEstimadoPendente = viagensPendentes.Sum(v => v.SaldoLiquido)
         };
 
         return ResultViewModel<ResumoDashboardDto>.Success(dto);

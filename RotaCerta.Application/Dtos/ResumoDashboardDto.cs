@@ -14,4 +14,8 @@ public class ResumoDashboardDto
     public string? ViagemAtivaStatus { get; set; }
     public int EntregasConcluidasAtiva { get; set; }
     public int TotalEntregasAtiva { get; set; }
+    public double TotalAReceber { get; set; }
+    public int ViagensPendentePagamento { get; set; }
+    public double TotalGastosPendentes { get; set; }
+    public double LucroEstimadoPendente { get; set; }
 }
