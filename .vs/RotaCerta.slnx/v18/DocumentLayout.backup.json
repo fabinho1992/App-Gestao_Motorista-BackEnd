@@ -57,8 +57,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -69,8 +77,7 @@
               "RelativeToolTip": "RotaCerta.Domain\\Common\\IAddressZipCode.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T11:35:57.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T11:35:57.711Z"
             },
             {
               "$type": "Document",
@@ -82,8 +89,7 @@
               "RelativeToolTip": "RotaCerta.Domain\\Common\\Interfaces.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T10:42:41.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T10:42:41.535Z"
             },
             {
               "$type": "Document",
@@ -93,18 +99,10 @@
               "RelativeDocumentMoniker": "RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
               "ToolTip": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
               "RelativeToolTip": "RotaCerta.Application\\ViagemHandler\\Commands\\AbrirViagem\\AbrirViagemHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwDEAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-08T10:34:56.13Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "RotaCerta.Infraestructure\\Repository\\ViagemRepositoty.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAUwFAAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T01:18:47.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T01:18:47.919Z"
             },
             {
               "$type": "Document",

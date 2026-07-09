@@ -18,8 +18,8 @@ public class ObterResumoDashboardHandler : IRequestHandler<ObterResumoDashboardQ
     }
 
     public async Task<ResultViewModel<ResumoDashboardDto>> Handle(
-        ObterResumoDashboardQuery request,
-        CancellationToken cancellationToken)
+    ObterResumoDashboardQuery request,
+    CancellationToken cancellationToken)
     {
         if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
             return ResultViewModel<ResumoDashboardDto>.Error("Usuário não autenticado.");
@@ -27,20 +27,31 @@ public class ObterResumoDashboardHandler : IRequestHandler<ObterResumoDashboardQ
         var viagens = await _unitOfWork.ViagemRepository
             .GetByMotoristaIdMesAsync(motoristaId, request.Mes, request.Ano, cancellationToken);
 
+        // ← filtra só encerradas e pagas para os cálculos financeiros
+        var viagensContabilizadas = viagens
+            .Where(v => v.Status == StatusViagem.Encerrada &&
+                        v.StatusPagamento == StatusPagamento.Pago)
+            .ToList();
+
         var viagemAtiva = viagens.FirstOrDefault(v =>
             v.Status == StatusViagem.Aberta ||
             v.Status == StatusViagem.EmRota);
 
         var dto = new ResumoDashboardDto
         {
-            TotalGanhosMes = viagens.Sum(v => v.ValorFrete),
-            TotalGastosMes = viagens.Sum(v => v.TotalGastos),
-            LucroLiquidoMes = viagens.Sum(v => v.SaldoLiquido),
-            TotalKmRodadosMes = viagens
+            // ← usa viagensContabilizadas para valores financeiros
+            TotalGanhosMes = viagensContabilizadas.Sum(v => v.ValorFrete),
+            TotalGastosMes = viagensContabilizadas.Sum(v => v.TotalGastos),
+            LucroLiquidoMes = viagensContabilizadas.Sum(v => v.SaldoLiquido),
+            TotalKmRodadosMes = viagensContabilizadas
                 .Where(v => v.KmRodado.HasValue)
                 .Sum(v => v.KmRodado!.Value),
+
+            // ← usa viagens completas para contagens gerais
             TotalViagensMes = viagens.Count,
             TotalEntregasMes = viagens.Sum(v => v.Entregas.Count),
+
+            // ← viagem ativa continua usando todas as viagens
             TemViagemAtiva = viagemAtiva is not null,
             ViagemAtivaId = viagemAtiva?.Id,
             ViagemAtivaEmpresa = viagemAtiva?.EmpresaContratante,
