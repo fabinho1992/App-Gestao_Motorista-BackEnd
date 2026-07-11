@@ -43,7 +43,8 @@ public class EncerrarViagemHandler : IRequestHandler<EncerrarViagemCommand, Resu
                 request.GastoPedagio,
                 request.GastoAlimentacao,
                 request.GastoOutros,
-                request.ObsEncerramento);
+                request.ObsEncerramento,
+                request.PrecoCombustivelLitro);
 
             await _unitOfWork.ViagemRepository.UpdateAsync(viagem, cancellationToken);
             await _unitOfWork.CommitAsync(cancellationToken);

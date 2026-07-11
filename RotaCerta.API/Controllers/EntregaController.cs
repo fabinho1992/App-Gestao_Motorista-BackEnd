@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using RotaCerta.Application.Dtos;
 using RotaCerta.Application.EntregaHandler.Commands.AdicionarEntrega;
 using RotaCerta.Application.EntregaHandler.Commands.ConfirmarEntrega;
+using RotaCerta.Application.EntregaHandler.Commands.ExcluirEntrega;
 using RotaCerta.Application.EntregaHandler.Commands.RegistrarFalhaEntrega;
 using RotaCerta.Application.Queries.Entrega;
 
@@ -90,5 +91,20 @@ public class EntregaController : ControllerBase
             return BadRequest(result);
 
         return Ok(result);
+    }
+
+    /// <summary>Exclui (soft delete) uma entrega pendente.</summary>
+    /// <response code="200">Entrega excluída com sucesso</response>
+    /// <response code="400">Erro de validacao</response>
+    /// <response code="401">Nao autorizado</response>
+    [HttpDelete("{id}")]
+    [Authorize]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Excluir(Guid id, CancellationToken ct)
+    {
+        var command = new ExcluirEntregaCommand(id);
+        var result = await _mediator.Send(command, ct);
+        return result.IsSuccess ? Ok(result) : BadRequest(result);
     }
 }

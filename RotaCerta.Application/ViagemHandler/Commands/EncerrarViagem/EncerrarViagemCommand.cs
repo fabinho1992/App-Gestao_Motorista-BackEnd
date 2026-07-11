@@ -11,4 +11,5 @@ public record EncerrarViagemCommand(
     double GastoPedagio = 0,
     double GastoAlimentacao = 0,
     double GastoOutros = 0,
-    string ObsEncerramento = "") : IRequest<ResultViewModel<AlertaOleo>>;
+    string ObsEncerramento = "",
+    double PrecoCombustivelLitro = 0) : IRequest<ResultViewModel<AlertaOleo>>;

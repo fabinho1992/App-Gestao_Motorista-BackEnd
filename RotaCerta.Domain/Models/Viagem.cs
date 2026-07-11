@@ -35,6 +35,7 @@ public class Viagem : BaseEntity
     public double GastoAlimentacao { get; private set; }
     public double GastoOutros { get; private set; }
     public string ObsEncerramento { get; private set; } = string.Empty;
+    public double PrecoCombustivelLitro { get; private set; }
 
     // --- factory method ---
 
@@ -102,7 +103,8 @@ public class Viagem : BaseEntity
         double gastoPedagio = 0,
         double gastoAlimentacao = 0,
         double gastoOutros = 0,
-        string obsEncerramento = "")
+        string obsEncerramento = "",
+        double precoCombustivelLitro = 0)
     {
         if (Status == StatusViagem.Encerrada)
             throw new InvalidOperationException("Viagem já encerrada.");
@@ -126,6 +128,7 @@ public class Viagem : BaseEntity
         GastoAlimentacao = gastoAlimentacao;
         GastoOutros = gastoOutros;
         ObsEncerramento = obsEncerramento;
+        PrecoCombustivelLitro = precoCombustivelLitro;
         Status = StatusViagem.Encerrada;
         MarcarComoAtualizado();
 

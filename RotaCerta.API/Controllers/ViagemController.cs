@@ -6,6 +6,7 @@ using RotaCerta.Application.Queries.Viagem;
 using RotaCerta.Application.ViagemHandler.Commands.AbrirViagem;
 using RotaCerta.Application.ViagemHandler.Commands.AtualizarStatusPagamento;
 using RotaCerta.Application.ViagemHandler.Commands.EncerrarViagem;
+using RotaCerta.Application.ViagemHandler.Commands.ExcluirViagem;
 using RotaCerta.Domain.Enums;
 
 namespace RotaCerta.API.Controllers;
@@ -136,5 +137,20 @@ public class ViagemController : ControllerBase
             return NotFound(result);
 
         return Ok(result);
+    }
+
+    /// <summary>Exclui (soft delete) uma viagem aberta sem entregas vinculadas.</summary>
+    /// <response code="200">Viagem excluída com sucesso</response>
+    /// <response code="400">Erro de validacao</response>
+    /// <response code="401">Nao autorizado</response>
+    [HttpDelete("{id}")]
+    [Authorize]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResultViewModel), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Excluir(Guid id, CancellationToken ct)
+    {
+        var command = new ExcluirViagemCommand(id);
+        var result = await _mediator.Send(command, ct);
+        return result.IsSuccess ? Ok(result) : BadRequest(result);
     }
 }

@@ -12,6 +12,7 @@ public class RelatorioCombustivelDto
     public double TotalGastosGeral { get; set; }
     public double TotalKmRodado { get; set; }
     public double MediaKmPorLitro { get; set; }
+    public double TotalLitrosAbastecidos { get; set; }
     public int TotalViagensEncerradas { get; set; }
     public List<DetalheCombustivelDto> Viagens { get; set; } = new();
 }

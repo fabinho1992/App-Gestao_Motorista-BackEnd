@@ -65,9 +65,15 @@ public class ObterRelatorioCombustivelHandler : IRequestHandler<ObterRelatorioCo
         dto.TotalGastosGeral = dto.TotalGastoCombustivel + dto.TotalGastoPedagio +
             dto.TotalGastoAlimentacao + dto.TotalGastoOutros;
 
-        dto.MediaKmPorLitro = dto.TotalGastoCombustivel > 0
-            ? dto.TotalKmRodado / dto.TotalGastoCombustivel
+        var totalLitros = viagens
+            .Where(v => v.PrecoCombustivelLitro > 0 && v.GastoCombustivel > 0)
+            .Sum(v => v.GastoCombustivel / v.PrecoCombustivelLitro);
+
+        dto.MediaKmPorLitro = totalLitros > 0 && dto.TotalKmRodado > 0
+            ? Math.Round(dto.TotalKmRodado / totalLitros, 1)
             : 0;
+
+        dto.TotalLitrosAbastecidos = Math.Round(totalLitros, 2);
 
         return ResultViewModel<RelatorioCombustivelDto>.Success(dto);
     }

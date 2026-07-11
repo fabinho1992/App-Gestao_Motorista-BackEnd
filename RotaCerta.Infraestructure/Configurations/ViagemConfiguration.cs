@@ -130,6 +130,12 @@ public class ViagemConfiguration : IEntityTypeConfiguration<Viagem>
             .HasColumnType("double precision")
             .HasDefaultValue(0);
 
+        builder.Property(v => v.PrecoCombustivelLitro)
+            .HasColumnName("preco_combustivel_litro")
+            .HasColumnType("double precision")
+            .HasDefaultValue(0)
+            .IsRequired();
+
         builder.Property(v => v.ObsEncerramento)
             .HasColumnName("obs_encerramento")
             .HasMaxLength(500)
