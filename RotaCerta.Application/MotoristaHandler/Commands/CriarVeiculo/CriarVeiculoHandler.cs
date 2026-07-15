@@ -34,6 +34,39 @@ public class CriarVeiculoHandler : IRequestHandler<CriarVeiculoCommand, ResultVi
             if (motorista is null)
                 return ResultViewModel<Guid>.Error("Motorista não encontrado.");
 
+            if (string.IsNullOrWhiteSpace(request.Placa))
+                return ResultViewModel<Guid>.Error(
+                    "Placa é obrigatória.");
+
+            if (string.IsNullOrWhiteSpace(request.Modelo))
+                return ResultViewModel<Guid>.Error(
+                    "Modelo é obrigatório.");
+
+            var anoAtual = DateTime.Today.Year;
+            if (request.Ano < 1950 || request.Ano > anoAtual + 1)
+                return ResultViewModel<Guid>.Error(
+                    $"Ano do veículo inválido. Informe um ano entre 1950 e {anoAtual + 1}.");
+
+            if (request.KmAtual < 0)
+                return ResultViewModel<Guid>.Error(
+                    "Km atual não pode ser negativo.");
+
+            if (request.KmUltimoOleo < 0)
+                return ResultViewModel<Guid>.Error(
+                    "Km do último óleo não pode ser negativo.");
+
+            if (request.KmUltimoOleo > request.KmAtual)
+                return ResultViewModel<Guid>.Error(
+                    "Km do último óleo não pode ser maior que o km atual.");
+
+            if (request.DataUltimoOleo > DateOnly.FromDateTime(DateTime.Today))
+                return ResultViewModel<Guid>.Error(
+                    "Data do último óleo não pode ser uma data futura.");
+
+            if (request.IntervaloOleo <= 0)
+                return ResultViewModel<Guid>.Error(
+                    "Intervalo de troca de óleo deve ser maior que zero.");
+
             var veiculo = Veiculo.Criar(
                 motoristaId,
                 request.Placa,

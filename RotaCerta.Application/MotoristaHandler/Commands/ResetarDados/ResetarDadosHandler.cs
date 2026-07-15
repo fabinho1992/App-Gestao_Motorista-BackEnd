@@ -29,21 +29,25 @@ public class ResetarDadosHandler : IRequestHandler<ResetarDadosCommand, ResultVi
             if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
                 return ResultViewModel.Error("Usuário não autenticado.");
 
+            var entregaIds = await _context.Viagens
+                .Where(v => v.MotoristaId == motoristaId)
+                .Select(v => v.Id)
+                .ToListAsync(cancellationToken);
+
+            var entregas = await _context.Entregas
+                .Where(e => entregaIds.Contains(e.ViagemId))
+                .ToListAsync(cancellationToken);
+
+            _context.Entregas.RemoveRange(entregas);
+            await _context.SaveChangesAsync(cancellationToken);
+
             var viagens = await _context.Viagens
                 .IgnoreQueryFilters()
                 .Where(v => v.MotoristaId == motoristaId)
                 .ToListAsync(cancellationToken);
 
-            foreach (var viagem in viagens)
-            {
-                var entregas = await _context.Entregas
-                    .Where(e => e.ViagemId == viagem.Id)
-                    .ToListAsync(cancellationToken);
-
-                _context.Entregas.RemoveRange(entregas);
-            }
-
             _context.Viagens.RemoveRange(viagens);
+            await _context.SaveChangesAsync(cancellationToken);
 
             var veiculos = await _context.Veiculos
                 .IgnoreQueryFilters()
@@ -51,8 +55,7 @@ public class ResetarDadosHandler : IRequestHandler<ResetarDadosCommand, ResultVi
                 .ToListAsync(cancellationToken);
 
             _context.Veiculos.RemoveRange(veiculos);
-
-            await _unitOfWork.CommitAsync(cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return ResultViewModel.Success();
         }

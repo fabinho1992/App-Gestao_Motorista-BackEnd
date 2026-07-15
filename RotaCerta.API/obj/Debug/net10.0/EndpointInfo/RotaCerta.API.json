@@ -1175,6 +1175,13 @@
             }
           },
           {
+            "name": "statusPagamento",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/StatusPagamento"
+            }
+          },
+          {
             "name": "pageNumber",
             "in": "query",
             "schema": {

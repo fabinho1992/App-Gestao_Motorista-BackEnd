@@ -74,6 +74,7 @@ public class ViagemController : ControllerBase
         [FromQuery] DateOnly? dataInicio,
         [FromQuery] DateOnly? dataFim,
         [FromQuery] string? empresaContratante,
+        [FromQuery] StatusPagamento? statusPagamento,
         [FromQuery] int pageNumber = 1,
         [FromQuery] int pageSize = 10,
         CancellationToken ct = default)
@@ -84,6 +85,7 @@ public class ViagemController : ControllerBase
             DataInicio = dataInicio,
             DataFim = dataFim,
             EmpresaContratante = empresaContratante,
+            StatusPagamento = statusPagamento,
             PageNumber = pageNumber,
             PageSize = pageSize
         };

@@ -15,7 +15,7 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
             .FirstOrDefaultAsync(v => v.Id == id, ct);
 
     public async Task<(List<Viagem> Items, int TotalPaginas, int TotalCount)> GetByMotoristaIdAsync(
-        Guid motoristaId, StatusViagem? status, DateOnly? dataInicio, DateOnly? dataFim, string? empresaContratante, int pageNumber, int pageSize, CancellationToken ct = default)
+        Guid motoristaId, StatusViagem? status, DateOnly? dataInicio, DateOnly? dataFim, string? empresaContratante, StatusPagamento? statusPagamento, int pageNumber, int pageSize, CancellationToken ct = default)
     {
         var query = context.Viagens
             .Include(v => v.Entregas)
@@ -34,6 +34,9 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
             query = query.Where(v =>
                 v.EmpresaContratante.ToLower()
                  .Contains(empresaContratante.ToLower()));
+
+        if (statusPagamento.HasValue)
+            query = query.Where(v => v.StatusPagamento == statusPagamento.Value);
 
         var totalCount = await query.CountAsync(ct);
         var totalPaginas = (int)Math.Ceiling((double)totalCount / pageSize);

@@ -51,6 +51,26 @@ public class AbrirViagemHandler : IRequestHandler<AbrirViagemCommand, ResultView
                     "Este veículo já possui uma viagem em andamento. " +
                     "Encerre a viagem atual antes de abrir uma nova com este veículo.");
 
+            if (request.KmInicial < 0)
+                return ResultViewModel<Guid>.Error(
+                    "Km inicial não pode ser negativo.");
+
+            if (request.ValorFrete <= 0)
+                return ResultViewModel<Guid>.Error(
+                    "Valor do frete deve ser maior que zero.");
+
+            if (string.IsNullOrWhiteSpace(request.EmpresaContratante))
+                return ResultViewModel<Guid>.Error(
+                    "Empresa contratante é obrigatória.");
+
+            if (string.IsNullOrWhiteSpace(request.Origem))
+                return ResultViewModel<Guid>.Error(
+                    "Origem é obrigatória.");
+
+            if (request.KmInicial < veiculo.KmAtual)
+                return ResultViewModel<Guid>.Error(
+                    $"Km inicial não pode ser menor que o km atual do veículo ({veiculo.KmAtual:N0} km).");
+
             var viagem = Viagem.Abrir(
                 motorista,
                 veiculo,

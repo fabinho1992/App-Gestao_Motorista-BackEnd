@@ -12,4 +12,5 @@ public class ListarViagensPorMotoristaQuery : ParametrosPaginacao,
     public DateOnly? DataInicio { get; set; }
     public DateOnly? DataFim { get; set; }
     public string? EmpresaContratante { get; set; }
+    public StatusPagamento? StatusPagamento { get; set; }
 }

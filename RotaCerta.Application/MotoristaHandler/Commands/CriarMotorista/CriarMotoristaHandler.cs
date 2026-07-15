@@ -26,6 +26,31 @@ public class CriarMotoristaHandler : IRequestHandler<CriarMotoristaCommand, Resu
     {
         try
         {
+            if (string.IsNullOrWhiteSpace(request.Nome))
+                return ResultViewModel<Guid>.Error(
+                    "Nome é obrigatório.");
+
+            var cpfNumeros = request.Cpf?.Replace(".", "").Replace("-", "") ?? "";
+            if (string.IsNullOrWhiteSpace(cpfNumeros) || cpfNumeros.Length != 11)
+                return ResultViewModel<Guid>.Error(
+                    "CPF inválido. Informe os 11 dígitos do CPF.");
+
+            if (string.IsNullOrWhiteSpace(request.Email) || !request.Email.Contains("@"))
+                return ResultViewModel<Guid>.Error(
+                    "Email inválido.");
+
+            if (string.IsNullOrWhiteSpace(request.Cnh))
+                return ResultViewModel<Guid>.Error(
+                    "CNH é obrigatória.");
+
+            if (request.vencimentoCnh < DateOnly.FromDateTime(DateTime.Today))
+                return ResultViewModel<Guid>.Error(
+                    "CNH vencida. Informe uma CNH com validade futura.");
+
+            if (string.IsNullOrWhiteSpace(request.telefone))
+                return ResultViewModel<Guid>.Error(
+                    "Telefone é obrigatório.");
+
             var cpfExistente = await _unitOfWork.MotoristaRepository
                 .GetByCpfAsync(request.Cpf, cancellationToken);
 

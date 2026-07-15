@@ -38,6 +38,31 @@ public class AtualizarMotoristaHandler : IRequestHandler<AtualizarMotoristaComma
             if (motorista is null)
                 return ResultViewModel.Error("Motorista não encontrado");
 
+            if (string.IsNullOrWhiteSpace(request.Nome))
+                return ResultViewModel.Error(
+                    "Nome é obrigatório.");
+
+            var cpfNumeros = request.Cpf?.Replace(".", "").Replace("-", "") ?? "";
+            if (string.IsNullOrWhiteSpace(cpfNumeros) || cpfNumeros.Length != 11)
+                return ResultViewModel.Error(
+                    "CPF inválido. Informe os 11 dígitos do CPF.");
+
+            if (string.IsNullOrWhiteSpace(request.Email) || !request.Email.Contains("@"))
+                return ResultViewModel.Error(
+                    "Email inválido.");
+
+            if (string.IsNullOrWhiteSpace(request.Cnh))
+                return ResultViewModel.Error(
+                    "CNH é obrigatória.");
+
+            if (request.VencimentoCnh < DateOnly.FromDateTime(DateTime.Today))
+                return ResultViewModel.Error(
+                    "CNH vencida. Informe uma CNH com validade futura.");
+
+            if (string.IsNullOrWhiteSpace(request.Telefone))
+                return ResultViewModel.Error(
+                    "Telefone é obrigatório.");
+
             var cpfExistente = await _unitOfWork.MotoristaRepository
                 .GetByCpfAsync(request.Cpf, cancellationToken);
 

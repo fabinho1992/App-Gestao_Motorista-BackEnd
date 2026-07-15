@@ -36,6 +36,25 @@ public class EncerrarViagemHandler : IRequestHandler<EncerrarViagemCommand, Resu
             if (viagem.MotoristaId != motoristaId)
                 return ResultViewModel<AlertaOleo>.Error("Viagem não pertence ao motorista autenticado.");
 
+            if (request.KmFinal < 0)
+                return ResultViewModel<AlertaOleo>.Error(
+                    "Km final não pode ser negativo.");
+
+            if (request.KmFinal < viagem.KmInicial)
+                return ResultViewModel<AlertaOleo>.Error(
+                    $"Km final não pode ser menor que o km inicial da viagem ({viagem.KmInicial:N0} km).");
+
+            if (request.GastoCombustivel < 0 ||
+                request.GastoPedagio     < 0 ||
+                request.GastoAlimentacao < 0 ||
+                request.GastoOutros      < 0)
+                return ResultViewModel<AlertaOleo>.Error(
+                    "Os valores de gastos não podem ser negativos.");
+
+            if (request.PrecoCombustivelLitro < 0)
+                return ResultViewModel<AlertaOleo>.Error(
+                    "Preço do combustível por litro não pode ser negativo.");
+
             // Encerrar: atualiza km do veículo e levanta KmAtualizadoEvent + ViagemEncerradaEvent
             var alerta = viagem.Encerrar(
                 request.KmFinal,

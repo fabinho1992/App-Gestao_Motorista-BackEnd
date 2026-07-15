@@ -632,6 +632,11 @@
         "IsRequired": false
       },
       {
+        "Name": "statusPagamento",
+        "Type": "System.Nullable\u00601[[RotaCerta.Domain.Enums.StatusPagamento, RotaCerta.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
         "Name": "pageNumber",
         "Type": "System.Int32",
         "IsRequired": false
