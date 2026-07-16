@@ -229,6 +229,70 @@ namespace RotaCerta.Infraestructure.Migrations
                     b.ToTable("entregas", (string)null);
                 });
 
+            modelBuilder.Entity("RotaCerta.Domain.Models.Manutencao", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime>("AtualizadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("atualizado_em");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("criado_em");
+
+                    b.Property<double>("Custo")
+                        .HasColumnType("double precision")
+                        .HasColumnName("custo");
+
+                    b.Property<DateOnly>("DataRealizacao")
+                        .HasColumnType("date")
+                        .HasColumnName("data_realizacao");
+
+                    b.Property<DateTime?>("DeletadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deletado_em");
+
+                    b.Property<string>("Descricao")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
+                        .HasColumnName("descricao");
+
+                    b.Property<bool>("Excluido")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("excluido");
+
+                    b.Property<double>("KmRealizacao")
+                        .HasColumnType("double precision")
+                        .HasColumnName("km_realizacao");
+
+                    b.Property<string>("Observacao")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
+                        .HasColumnName("observacao");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasColumnName("tipo");
+
+                    b.Property<Guid>("VeiculoId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("veiculo_id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VeiculoId")
+                        .HasDatabaseName("ix_manutencoes_veiculo_id");
+
+                    b.ToTable("manutencoes", (string)null);
+                });
+
             modelBuilder.Entity("RotaCerta.Domain.Models.Motorista", b =>
                 {
                     b.Property<Guid>("Id")

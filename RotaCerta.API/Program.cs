@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using RotaCerta.Extensions;
+using RotaCerta.Infraestructure.Context;
 using Scalar.AspNetCore;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -55,6 +57,13 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider
+        .GetRequiredService<DbRotaCertaContext>();
+    db.Database.Migrate();
+}
 
 if (app.Environment.IsDevelopment())
 {

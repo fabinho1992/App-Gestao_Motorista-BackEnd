@@ -14,6 +14,7 @@ public sealed class UnitOfWork(
     private IVeiculoRepository? _veiculoRepository;
     private IViagemRepository? _viagemRepository;
     private IEntregaRepository? _entregaRepository;
+    private IManutencaoRepository? _manutencaoRepository;
 
     public IMotoristaRepository MotoristaRepository
         => _motoristaRepository ??= new MotoristaRepository(context);
@@ -26,6 +27,9 @@ public sealed class UnitOfWork(
 
     public IEntregaRepository EntregaRepository
         => _entregaRepository ??= new EntregaRepository(context);
+
+    public IManutencaoRepository ManutencaoRepository
+        => _manutencaoRepository ??= new ManutencaoRepository(context);
 
     public async Task<int> CommitAsync(CancellationToken cancellationToken = default)
     {

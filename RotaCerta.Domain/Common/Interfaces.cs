@@ -40,3 +40,11 @@ public interface IEntregaRepository
     Task AddAsync(Entrega entrega, CancellationToken ct = default);
     Task UpdateAsync(Entrega entrega, CancellationToken ct = default);
 }
+
+public interface IManutencaoRepository
+{
+    Task<Manutencao?> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<List<Manutencao>> GetByVeiculoIdAsync(Guid veiculoId, CancellationToken ct = default);
+    Task AddAsync(Manutencao manutencao, CancellationToken ct = default);
+    Task UpdateAsync(Manutencao manutencao, CancellationToken ct = default);
+}

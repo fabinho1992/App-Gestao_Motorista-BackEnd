@@ -18,6 +18,7 @@ namespace RotaCerta.Infraestructure.Context
         public DbSet<Viagem> Viagens { get; set; }
         public DbSet<Entrega> Entregas { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
+        public DbSet<Manutencao> Manutencoes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
