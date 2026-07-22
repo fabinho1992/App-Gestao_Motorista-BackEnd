@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using RotaCerta.API.Middlewares;
 using RotaCerta.Extensions;
 using RotaCerta.Infraestructure.Context;
 using Scalar.AspNetCore;
@@ -57,6 +58,8 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 using (var scope = app.Services.CreateScope())
 {

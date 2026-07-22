@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RotaCerta.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baf2019de2cf0910568bd72b76c6424c67152dee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e931ca1fcc8108b82284633eaba08391b182b375")]
 [assembly: System.Reflection.AssemblyProductAttribute("RotaCerta.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RotaCerta.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

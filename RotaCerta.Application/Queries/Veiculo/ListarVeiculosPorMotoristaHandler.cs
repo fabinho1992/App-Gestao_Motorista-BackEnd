@@ -20,6 +20,7 @@ public class ListarVeiculosPorMotoristaHandler : IRequestHandler<ListarVeiculosP
         ListarVeiculosPorMotoristaQuery request,
         CancellationToken cancellationToken)
     {
+
         if (!Guid.TryParse(_usuarioContext.MotoristaId, out var motoristaId))
             return ResultViewModel<List<Domain.Models.Veiculo>>.Error("Usuário não autenticado.");
 
