@@ -8,11 +8,17 @@ using System.Text;
 
 namespace RotaCerta.Application.VeiculoHandler.Commands.ExcluirVeiculo
 {
-    public class ExcluirVeiculoHandler
-    : IRequestHandler<ExcluirVeiculoCommand, ResultViewModel>
+    public class ExcluirVeiculoHandler : IRequestHandler<ExcluirVeiculoCommand, ResultViewModel>
+
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IUsuarioContext _usuarioContext;
+
+        public ExcluirVeiculoHandler(IUnitOfWork unitOfWork, IUsuarioContext usuarioContext)
+        {
+            _unitOfWork = unitOfWork;
+            _usuarioContext = usuarioContext;
+        }
 
         public async Task<ResultViewModel> Handle(
             ExcluirVeiculoCommand request,

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RotaCerta.Extensions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e931ca1fcc8108b82284633eaba08391b182b375")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8543dc4b9d554a1c363b09fd191926fe131e7518")]
 [assembly: System.Reflection.AssemblyProductAttribute("RotaCerta.Extensions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RotaCerta.Extensions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
