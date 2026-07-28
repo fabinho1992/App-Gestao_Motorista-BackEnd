@@ -10,9 +10,10 @@ public sealed class ViagemRepository(DbRotaCertaContext context) : IViagemReposi
 {
     public async Task<Viagem?> GetByIdAsync(Guid id, CancellationToken ct = default)
         => await context.Viagens
-            .Include(v => v.Entregas)
-            .Include(v => v.Veiculo)
-            .FirstOrDefaultAsync(v => v.Id == id, ct);
+               .Include(v => v.Entregas)
+                .Include(v => v.Veiculo)
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(v => v.Id == id && !v.Excluido, ct);
 
     public async Task<(List<Viagem> Items, int TotalPaginas, int TotalCount)> GetByMotoristaIdAsync(
         Guid motoristaId, StatusViagem? status, DateOnly? dataInicio, DateOnly? dataFim, string? empresaContratante, StatusPagamento? statusPagamento, int pageNumber, int pageSize, CancellationToken ct = default)
