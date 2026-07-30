@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using RotaCerta.API.Middlewares;
 using RotaCerta.Extensions;
 using RotaCerta.Infraestructure.Context;
@@ -16,6 +20,38 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.Converters
             .Add(new JsonStringEnumConverter());
     });
+
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(resource => resource
+        .AddService(
+            serviceName: "RotaCerta.API",
+            serviceVersion: "1.0.0"))
+    .WithTracing(tracing => tracing
+        .AddAspNetCoreInstrumentation(opts =>
+        {
+            opts.Filter = ctx =>
+                !ctx.Request.Path.StartsWithSegments("/health");
+        })
+        .AddEntityFrameworkCoreInstrumentation()
+        .AddHttpClientInstrumentation()
+        .AddConsoleExporter()
+        .AddOtlpExporter(otlp =>
+        {
+            var baseEndpoint = builder.Configuration["OpenTelemetry:Endpoint"]!;
+            otlp.Endpoint = new Uri(baseEndpoint + "/v1/traces");
+            otlp.Headers = builder.Configuration["OpenTelemetry:Headers"];
+            otlp.Protocol = OtlpExportProtocol.HttpProtobuf;
+        }))
+    .WithMetrics(metrics => metrics
+        .AddAspNetCoreInstrumentation()
+        .AddRuntimeInstrumentation()
+        .AddOtlpExporter(otlp =>
+        {
+            var baseEndpoint = builder.Configuration["OpenTelemetry:Endpoint"]!;
+            otlp.Endpoint = new Uri(baseEndpoint + "/v1/metrics");
+            otlp.Headers = builder.Configuration["OpenTelemetry:Headers"];
+            otlp.Protocol = OtlpExportProtocol.HttpProtobuf;
+        }));
 
 builder.Services.AddOpenApi(options =>
 {
@@ -58,6 +94,12 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+//Teste OpenTelemetry
+var endpoint = builder.Configuration["OpenTelemetry:Endpoint"];
+var headers = builder.Configuration["OpenTelemetry:Headers"];
+Console.WriteLine($"OTel Endpoint: {endpoint}");
+Console.WriteLine($"OTel Headers: {headers?.Substring(0, 20)}...");
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
