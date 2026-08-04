@@ -1,11 +1,11 @@
-﻿// Infrastructure/Storage/SupabaseImagemStorageService.cs
+﻿
 using Microsoft.Extensions.Options;
 using RotaCerta.Domain.Common;
-using RotaCerta.Domain.Services; // ← interface IImagemStorageService
+using RotaCerta.Domain.Services; 
 using RotaCerta.Infrastructure.Repository.Storage;
 using System.Net.Http.Headers;
 
-namespace RotaCerta.Infraestructure.Storage;
+namespace RotaCerta.Infraestructure.Repository.Storage;
 
 public class SupabaseImagemStorageService : IImagemStorageService
 {

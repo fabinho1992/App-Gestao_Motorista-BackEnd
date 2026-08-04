@@ -92,6 +92,11 @@ builder.Services.AddCors(options =>
     });
 });
 
+var portaRender = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(portaRender))
+{
+    builder.WebHost.UseUrls($"http://+:{portaRender}");
+}
 
 var app = builder.Build();
 
@@ -99,7 +104,7 @@ var app = builder.Build();
 var endpoint = builder.Configuration["OpenTelemetry:Endpoint"];
 var headers = builder.Configuration["OpenTelemetry:Headers"];
 Console.WriteLine($"OTel Endpoint: {endpoint}");
-Console.WriteLine($"OTel Headers: {headers?.Substring(0, 20)}...");
+Console.WriteLine($"OTel Headers: {(headers?.Length > 20 ? headers[..20] : headers)}...");
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
@@ -123,12 +128,6 @@ if (app.Environment.IsDevelopment())
             PreferredSecurityScheme = "Bearer"
         };
     });
-}
-
-var portaRender = Environment.GetEnvironmentVariable("PORT");
-if (!string.IsNullOrWhiteSpace(portaRender))
-{
-    builder.WebHost.UseUrls($"http://+:{portaRender}");
 }
 
 // ... resto das configurações ...

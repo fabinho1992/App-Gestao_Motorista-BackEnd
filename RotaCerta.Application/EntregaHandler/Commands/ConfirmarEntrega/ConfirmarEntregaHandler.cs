@@ -10,15 +10,18 @@ public class ConfirmarEntregaHandler : IRequestHandler<ConfirmarEntregaCommand, 
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUsuarioContext _usuarioContext;
     private readonly IImagemStorageService _imagemStorageService;
+    private readonly IImagemProcessorService _imagemProcessorService;
 
     public ConfirmarEntregaHandler(
         IUnitOfWork unitOfWork,
         IUsuarioContext usuarioContext,
-        IImagemStorageService imagemStorageService)
+        IImagemStorageService imagemStorageService,
+        IImagemProcessorService imagemProcessorService)
     {
         _unitOfWork = unitOfWork;
         _usuarioContext = usuarioContext;
         _imagemStorageService = imagemStorageService;
+        _imagemProcessorService = imagemProcessorService;
     }
 
     public async Task<ResultViewModel> Handle(
@@ -61,16 +64,20 @@ public class ConfirmarEntregaHandler : IRequestHandler<ConfirmarEntregaCommand, 
                     if (!validacao.IsValida)
                         return ResultViewModel.Error(validacao.Mensagem);
 
-                    // gera nome único para cada foto
-                    var extensao = Path.GetExtension(foto.FileName);
-                    var nomeArquivo = $"{motoristaId}/{entrega.Id}/{Guid.NewGuid()}{extensao}";
+                    // processa a imagem: resize + reencode WebP + remove EXIF — sempre, independente do que chegou
+                    await using var streamOriginal = foto.OpenReadStream();
+                    await using var streamProcessado = await _imagemProcessorService.ProcessarAsync(streamOriginal, cancellationToken);
 
-                    // faz upload
-                    await using var stream = foto.OpenReadStream();
+                    Console.WriteLine($"Imagem processada: {foto.FileName} | Original: {foto.Length / 1024}KB → Processada: {streamProcessado.Length / 1024}KB");
+
+                    // nome sempre .webp, já que é o que o processor sempre gera
+                    var nomeArquivo = $"{motoristaId}/{entrega.Id}/{Guid.NewGuid()}.webp";
+
+                    // faz upload da versão processada
                     var fotoUrl = await _imagemStorageService.UploadImagemAsync(
-                        stream,
+                        streamProcessado,
                         nomeArquivo,
-                        foto.ContentType,
+                        "image/webp",
                         cancellationToken);
 
                     // adiciona a URL na lista da entrega

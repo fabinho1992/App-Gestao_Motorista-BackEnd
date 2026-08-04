@@ -13,10 +13,10 @@ using RotaCerta.Infraestructure.Context;
 using RotaCerta.Infraestructure.Context.Identity;
 using RotaCerta.Infraestructure.DomainEvents;
 using RotaCerta.Infraestructure.Repository;
+using RotaCerta.Infraestructure.Repository.Storage;
 using RotaCerta.Infraestructure.Services.AuthService;
 using RotaCerta.Infraestructure.Services.AuthService.TokenGeracao;
 using RotaCerta.Infrastructure.Repositories;
-using RotaCerta.Infraestructure.Storage;
 using RotaCerta.Infrastructure.Repository.Storage;
 using System.Text;
 
@@ -49,6 +49,8 @@ public static class ExtensaoDeConfiguracao
         services.AddScoped<IViagemRepository, ViagemRepository>();
         services.AddScoped<IVeiculoRepository, VeiculoRepository>();
         services.AddScoped<DomainEventDispatcher>();
+
+        services.AddScoped<IImagemProcessorService, ImageSharpProcessorService>();
 
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(typeof(CriarMotoristaCommand).Assembly));

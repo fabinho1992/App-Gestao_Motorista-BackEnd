@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "64s0KU7D/Ik=",
+  "dgSpecHash": "ru06QQlQYHA=",
   "success": true,
   "projectFilePath": "D:\\AulasAluraBackEnd\\App_ControleMotorista\\RotaCerta\\RotaCerta.Application\\RotaCerta.Application.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,9 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.net.http.headers\\2.3.10\\microsoft.net.http.headers.2.3.10.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\npgsql\\10.0.3\\npgsql.10.0.3.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\10.0.2\\npgsql.entityframeworkcore.postgresql.10.0.2.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\sixlabors.imagesharp.4.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
