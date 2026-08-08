@@ -85,7 +85,9 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 "http://localhost:3000",
                 "http://localhost:3001",
-                "https://app-gestao-motorista-front.vercel.app" )   // ← portas do Next.js
+                "https://app-gestao-motorista-front.vercel.app",
+                "https://approtacerta.com.br",
+                "https://www.approtacerta.com.br")   // ← portas do Next.js
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
