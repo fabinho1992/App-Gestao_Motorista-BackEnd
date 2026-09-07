@@ -395,6 +395,17 @@
           }
         }
       },
+      "Resend/0.16.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "10.0.9"
+        },
+        "runtime": {
+          "lib/net8.0/Resend.dll": {
+            "assemblyVersion": "0.16.0.0",
+            "fileVersion": "0.16.0.0"
+          }
+        }
+      },
       "SixLabors.ImageSharp/4.0.0": {
         "dependencies": {
           "System.IO.Hashing": "8.0.0"
@@ -444,6 +455,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.9",
           "Microsoft.Extensions.Identity.Core": "10.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2",
+          "Resend": "0.16.0",
           "RotaCerta.Domain": "1.0.0",
           "SixLabors.ImageSharp": "4.0.0"
         },
@@ -692,6 +704,13 @@
       "sha512": "sha512-PsNYgPOSW41Xx19gin7y4EdZAPteWr9Cb01XkdObxOsPzi+mgBupBEN7J7+erXFsROPOILM7MlIoO9QzL8+LGQ==",
       "path": "npgsql.entityframeworkcore.postgresql/10.0.2",
       "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.2.nupkg.sha512"
+    },
+    "Resend/0.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zz601fI/zbRd/KkkfGfjfIw+87IrDXi4ekVGOXNnoOl97XakoMt7PvunY62PKBayo5BQs3C+MS8KPtWm+pWXBw==",
+      "path": "resend/0.16.0",
+      "hashPath": "resend.0.16.0.nupkg.sha512"
     },
     "SixLabors.ImageSharp/4.0.0": {
       "type": "package",

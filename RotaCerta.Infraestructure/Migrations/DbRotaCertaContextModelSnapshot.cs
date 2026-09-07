@@ -155,6 +155,76 @@ namespace RotaCerta.Infraestructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("RotaCerta.Domain.Models.Assinatura", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime>("AtualizadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("atualizado_em");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("criado_em");
+
+                    b.Property<DateTime?>("DeletadoEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("deletado_em");
+
+                    b.Property<bool>("Excluido")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("excluido");
+
+                    b.Property<string>("GatewayAssinaturaId")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("gateway_assinatura_id");
+
+                    b.Property<string>("GatewayClienteId")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("gateway_cliente_id");
+
+                    b.Property<bool>("LembreteEnviado")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("lembrete_enviado");
+
+                    b.Property<Guid>("MotoristaId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("motorista_id");
+
+                    b.Property<DateTime?>("ProximaCobrancaEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("proxima_cobranca_em");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasColumnName("status");
+
+                    b.Property<DateTime>("TrialFimEm")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("trial_fim_em");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MotoristaId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_assinaturas_motorista_id");
+
+                    b.HasIndex("Status", "TrialFimEm")
+                        .HasDatabaseName("ix_assinaturas_status_trial_fim_em");
+
+                    b.ToTable("assinaturas", (string)null);
+                });
+
             modelBuilder.Entity("RotaCerta.Domain.Models.Entrega", b =>
                 {
                     b.Property<Guid>("Id")
@@ -303,12 +373,6 @@ namespace RotaCerta.Infraestructure.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("atualizado_em");
 
-                    b.Property<string>("Cnh")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("character varying(20)")
-                        .HasColumnName("cnh");
-
                     b.Property<string>("Cpf")
                         .IsRequired()
                         .HasMaxLength(14)
@@ -352,10 +416,6 @@ namespace RotaCerta.Infraestructure.Migrations
                         .HasColumnName("vencimento_cnh");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Cnh")
-                        .IsUnique()
-                        .HasDatabaseName("ix_motoristas_cnh");
 
                     b.HasIndex("Cpf")
                         .IsUnique()

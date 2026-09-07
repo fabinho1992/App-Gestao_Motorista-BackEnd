@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "RotaCerta.API.Controllers.AssinaturaController",
+    "Method": "Checkout",
+    "RelativePath": "api/v1/assinatura/checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.AssinaturaController",
+    "Method": "Renovar",
+    "RelativePath": "api/v1/assinatura/renovar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RotaCerta.API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/v1/auth/login",
@@ -148,6 +168,38 @@
         "StatusCode": 400
       }
     ]
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.EmailController",
+    "Method": "Alterar",
+    "RelativePath": "api/v1/email/alterar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "RotaCerta.Application.EmailHandler.Commands.ChangePassword.ChangePasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.EmailController",
+    "Method": "SolicitarReset",
+    "RelativePath": "api/v1/email/solicitar-reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "RotaCerta.Application.EmailHandler.Commands.ResetPassword.ResetCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RotaCerta.API.Controllers.EntregaController",
@@ -951,5 +1003,21 @@
         "StatusCode": 400
       }
     ]
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.WebhooksController",
+    "Method": "Pagamento",
+    "RelativePath": "api/v1/webhooks/pagamento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payload",
+        "Type": "RotaCerta.Domain.Services.Pagamento.Dtos.AsaasWebhookPayload",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

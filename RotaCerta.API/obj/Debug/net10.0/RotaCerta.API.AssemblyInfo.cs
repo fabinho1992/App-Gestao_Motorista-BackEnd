@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RotaCerta.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92904b3e53413fad167a5cfbc18c272eb23bee4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1af42d2445ae9771fc1ce33762c89b4750fd02a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RotaCerta.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RotaCerta.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

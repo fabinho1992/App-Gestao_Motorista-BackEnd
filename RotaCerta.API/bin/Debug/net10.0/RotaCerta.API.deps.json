@@ -650,6 +650,14 @@
           }
         }
       },
+      "Resend/0.16.0": {
+        "runtime": {
+          "lib/net8.0/Resend.dll": {
+            "assemblyVersion": "0.16.0.0",
+            "fileVersion": "0.16.0.0"
+          }
+        }
+      },
       "Scalar.AspNetCore/2.16.4": {
         "runtime": {
           "lib/net10.0/Scalar.AspNetCore.dll": {
@@ -800,6 +808,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2",
+          "Resend": "0.16.0",
           "RotaCerta.Domain": "1.0.0",
           "SixLabors.ImageSharp": "4.0.0"
         },
@@ -1090,6 +1099,13 @@
       "sha512": "sha512-HyYenisDn/xdtyVXdjImsCl+RNC2gq01N0rvSR7tsYAylXR2sxX/YgMsyTajMXA27+r1vB7lNU8cWRhV0fwL+Q==",
       "path": "opentelemetry.instrumentation.runtime/1.17.0",
       "hashPath": "opentelemetry.instrumentation.runtime.1.17.0.nupkg.sha512"
+    },
+    "Resend/0.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zz601fI/zbRd/KkkfGfjfIw+87IrDXi4ekVGOXNnoOl97XakoMt7PvunY62PKBayo5BQs3C+MS8KPtWm+pWXBw==",
+      "path": "resend/0.16.0",
+      "hashPath": "resend.0.16.0.nupkg.sha512"
     },
     "Scalar.AspNetCore/2.16.4": {
       "type": "package",

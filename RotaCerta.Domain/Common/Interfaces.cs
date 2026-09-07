@@ -48,3 +48,14 @@ public interface IManutencaoRepository
     Task AddAsync(Manutencao manutencao, CancellationToken ct = default);
     Task UpdateAsync(Manutencao manutencao, CancellationToken ct = default);
 }
+
+public interface IAssinaturaRepository
+{
+    Task<Assinatura?> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<Assinatura?> GetByMotoristaIdAsync(Guid motoristaId, CancellationToken ct = default);
+    Task AddAsync(Assinatura assinatura, CancellationToken ct = default);
+    Task<List<Assinatura>> GetTrialsProximosDoFimAsync(int dias, CancellationToken ct);
+    Task UpdateAsync(Assinatura assinatura, CancellationToken ct = default);
+    Task<Assinatura?> GetByGatewayAssinaturaIdAsync(string gatewayAssinaturaId, CancellationToken cancellationToken = default);
+    Task<List<Assinatura>> GetAssinaturasProximasDaRenovacaoAsync(int diasAntes, CancellationToken cancellationToken = default);
+}

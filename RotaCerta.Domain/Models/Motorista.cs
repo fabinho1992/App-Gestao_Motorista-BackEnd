@@ -11,7 +11,6 @@ public class Motorista : BaseEntity
     public string Cpf { get; private set; } = string.Empty;
     public string Email { get; private set; } = string.Empty;
     public string Telefone { get; private set; } = string.Empty;
-    public string Cnh { get; private set; } = string.Empty;
     public DateOnly VencimentoCnh { get; private set; }
 
     // um motorista pode ter vários veículos
@@ -24,7 +23,6 @@ public class Motorista : BaseEntity
         string cpf,
         string email,
         string telefone,
-        string cnh,
         DateOnly vencimentoCnh)
     {
         var motorista = new Motorista
@@ -33,7 +31,6 @@ public class Motorista : BaseEntity
             Cpf = cpf,
             Email = email,
             Telefone = telefone,
-            Cnh = cnh,
             VencimentoCnh = vencimentoCnh
         };
 
@@ -54,7 +51,6 @@ public class Motorista : BaseEntity
         Cpf = cpf;
         Email = email;
         Telefone = telefone;
-        Cnh = cnh;
         VencimentoCnh = vencimentoCnh;
         MarcarComoAtualizado();
     }
@@ -79,6 +75,6 @@ public class Motorista : BaseEntity
     /// <summary>
     /// Retorna true se a CNH vence nos próximos 'dias' dias.
     /// </summary>
-    public bool CnhProximaDoVencimento(int dias = 30)
+    public bool CnhProximaDoVenciment (int dias = 30)
         => VencimentoCnh <= DateOnly.FromDateTime(DateTime.Today.AddDays(dias));
 }

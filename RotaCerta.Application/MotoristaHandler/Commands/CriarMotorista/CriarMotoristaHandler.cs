@@ -39,10 +39,6 @@ public class CriarMotoristaHandler : IRequestHandler<CriarMotoristaCommand, Resu
                 return ResultViewModel<Guid>.Error(
                     "Email inválido.");
 
-            if (string.IsNullOrWhiteSpace(request.Cnh))
-                return ResultViewModel<Guid>.Error(
-                    "CNH é obrigatória.");
-
             if (request.vencimentoCnh < DateOnly.FromDateTime(DateTime.Today))
                 return ResultViewModel<Guid>.Error(
                     "CNH vencida. Informe uma CNH com validade futura.");
@@ -68,7 +64,6 @@ public class CriarMotoristaHandler : IRequestHandler<CriarMotoristaCommand, Resu
                 request.Cpf,
                 request.Email,
                 request.telefone,
-                request.Cnh,
                 request.vencimentoCnh);
 
             var registerUser = new RegisterUser(
@@ -82,7 +77,10 @@ public class CriarMotoristaHandler : IRequestHandler<CriarMotoristaCommand, Resu
             if (identityResult.Status != "Ok")
                 return ResultViewModel<Guid>.Error(identityResult.Message!);
 
+            var assinatura = new Assinatura(motorista.Id, diasTrial: 15);
+
             await _unitOfWork.MotoristaRepository.AddAsync(motorista, cancellationToken);
+            await _unitOfWork.AssinaturaRepository.AddAsync(assinatura, cancellationToken);
             await _unitOfWork.CommitAsync(cancellationToken);
 
             return ResultViewModel<Guid>.Success(motorista.Id);

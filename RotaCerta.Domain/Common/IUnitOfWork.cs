@@ -9,6 +9,7 @@ public interface IUnitOfWork
     IViagemRepository ViagemRepository { get; }
     IEntregaRepository EntregaRepository { get; }
     IManutencaoRepository ManutencaoRepository { get; }
+    IAssinaturaRepository AssinaturaRepository { get; }
 
     Task<int> CommitAsync(CancellationToken cancellationToken = default);
 }

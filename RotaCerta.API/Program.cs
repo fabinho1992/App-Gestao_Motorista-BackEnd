@@ -135,9 +135,10 @@ if (app.Environment.IsDevelopment())
 // ... resto das configurações ...
 
 app.UseCors("RotaCertaFront");
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<AssinaturaGateMiddleware>();
 app.MapControllers();
 
 app.Run(); // ← só isso no final

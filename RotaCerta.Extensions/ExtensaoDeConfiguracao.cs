@@ -4,18 +4,25 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Resend;
 using RotaCerta.Application.MotoristaHandler.Commands.CriarMotorista;
 using RotaCerta.Domain.Common;
 using RotaCerta.Domain.Common.Interfaces;
 using RotaCerta.Domain.Services;
 using RotaCerta.Domain.Services.IAuthService;
+using RotaCerta.Domain.Services.IEmail;
+using RotaCerta.Domain.Services.Pagamento;
 using RotaCerta.Infraestructure.Context;
 using RotaCerta.Infraestructure.Context.Identity;
 using RotaCerta.Infraestructure.DomainEvents;
+using RotaCerta.Infraestructure.Pagamento;
 using RotaCerta.Infraestructure.Repository;
 using RotaCerta.Infraestructure.Repository.Storage;
 using RotaCerta.Infraestructure.Services.AuthService;
 using RotaCerta.Infraestructure.Services.AuthService.TokenGeracao;
+using RotaCerta.Infraestructure.Services.LembreteBackgroundService;
+using RotaCerta.Infraestructure.Services.ServiceEmail;
+using RotaCerta.Infraestructure.Services.WhatsApp;
 using RotaCerta.Infrastructure.Repositories;
 using RotaCerta.Infrastructure.Repository.Storage;
 using System.Text;
@@ -49,6 +56,10 @@ public static class ExtensaoDeConfiguracao
         services.AddScoped<IViagemRepository, ViagemRepository>();
         services.AddScoped<IVeiculoRepository, VeiculoRepository>();
         services.AddScoped<DomainEventDispatcher>();
+        services.AddHttpClient<IPagamentoGatewayService, AsaasPagamentoGatewayService>();
+        services.AddHttpClient<IWhatsAppService, WhatsAppMetaService>();
+
+        services.AddHostedService<LembreteTrialBackgroundService>();
 
         services.AddScoped<IImagemProcessorService, ImageSharpProcessorService>();
 
@@ -57,6 +68,20 @@ public static class ExtensaoDeConfiguracao
 
         services.AddHttpContextAccessor();
         services.AddScoped<IUsuarioContext, UsuarioContext>();
+
+
+        //CONFIGURAÇÃO RESEND EMAIL
+
+        services.AddOptions();
+        services.AddHttpClient<ResendClient>();
+        services.Configure<ResendClientOptions>(o =>
+        {
+            o.ApiToken = configuration["Resend:ApiKey"];
+        });
+        services.AddTransient<IResend, ResendClient>();
+        services.AddScoped<IEmailService, EmailService>();
+        services.AddScoped<ISendEmail, SendEmail>();
+
 
         return services;
     }

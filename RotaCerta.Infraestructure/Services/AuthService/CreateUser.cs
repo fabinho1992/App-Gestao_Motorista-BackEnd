@@ -16,7 +16,7 @@ public class CreateUser : ICreateUser
 
     public async Task<ResponseIdentityCreate> CreateUserAsync(RegisterUser registerUser)
     {
-        var usuarioExiste = await _userManager.FindByEmailAsync(registerUser.UserName);
+        var usuarioExiste = await _userManager.FindByEmailAsync(registerUser.Email);
 
         if (usuarioExiste != null)
             return new ResponseIdentityCreate { Status = "Erro", Message = "Usuário já existe!" };
@@ -33,7 +33,10 @@ public class CreateUser : ICreateUser
         var resultado = await _userManager.CreateAsync(user, registerUser.Password!);
 
         if (!resultado.Succeeded)
-            return new ResponseIdentityCreate { Status = "Erro", Message = "Erro ao criar usuário." };
+        {
+            var erros = string.Join(" | ", resultado.Errors.Select(e => e.Description));
+            return new ResponseIdentityCreate { Status = "Erro", Message = $"Erro ao criar usuário: {erros}" };
+        }
 
         return new ResponseIdentityCreate { Status = "Ok", Message = "Usuário criado com sucesso." };
     }

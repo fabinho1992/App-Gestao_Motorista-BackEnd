@@ -13,6 +13,30 @@
     }
   ],
   "paths": {
+    "/api/v1/assinatura/checkout": {
+      "post": {
+        "tags": [
+          "Assinatura"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/assinatura/renovar": {
+      "post": {
+        "tags": [
+          "Assinatura"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/auth/registrar": {
       "post": {
         "tags": [
@@ -301,6 +325,70 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/v1/email/solicitar-reset": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetCommand"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/email/alterar": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1767,6 +1855,38 @@
           }
         }
       }
+    },
+    "/api/v1/webhooks/pagamento": {
+      "post": {
+        "tags": [
+          "Webhooks"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsaasWebhookPayload"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsaasWebhookPayload"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsaasWebhookPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1880,6 +2000,53 @@
           }
         }
       },
+      "AsaasWebhookPayload": {
+        "required": [
+          "event",
+          "payment"
+        ],
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "payment": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/AsaasWebhookPayment"
+              }
+            ]
+          }
+        }
+      },
+      "AsaasWebhookPayment": {
+        "required": [
+          "id",
+          "subscription",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "subscription": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
       "AtualizarMotoristaCommand": {
         "required": [
           "nome",
@@ -1923,11 +2090,29 @@
           }
         }
       },
+      "ChangePasswordCommand": {
+        "required": [
+          "email",
+          "code",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
       "CriarMotoristaCommand": {
         "required": [
           "nome",
           "cpf",
-          "cnh",
           "telefone",
           "vencimentoCnh",
           "email",
@@ -1939,9 +2124,6 @@
             "type": "string"
           },
           "cpf": {
-            "type": "string"
-          },
-          "cnh": {
             "type": "string"
           },
           "telefone": {
@@ -2499,6 +2681,17 @@
             "items": {
               "$ref": "#/components/schemas/DetalheCombustivelDto"
             }
+          }
+        }
+      },
+      "ResetCommand": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
           }
         }
       },
@@ -3540,10 +3733,16 @@
   },
   "tags": [
     {
+      "name": "Assinatura"
+    },
+    {
       "name": "Auth"
     },
     {
       "name": "Dashboard"
+    },
+    {
+      "name": "Email"
     },
     {
       "name": "Entrega"
@@ -3559,6 +3758,9 @@
     },
     {
       "name": "Viagem"
+    },
+    {
+      "name": "Webhooks"
     }
   ]
 }

@@ -59,11 +59,6 @@ public class MotoristaConfiguration : IEntityTypeConfiguration<Motorista>
             .HasMaxLength(20)
             .IsRequired();
 
-        builder.Property(m => m.Cnh)
-            .HasColumnName("cnh")
-            .HasMaxLength(20)
-            .IsRequired();
-
         builder.Property(m => m.VencimentoCnh)
             .HasColumnName("vencimento_cnh")
             .HasColumnType("date")
@@ -79,10 +74,6 @@ public class MotoristaConfiguration : IEntityTypeConfiguration<Motorista>
             .IsUnique()
             .HasDatabaseName("ix_motoristas_email");
 
-        // índice único na CNH
-        builder.HasIndex(m => m.Cnh)
-            .IsUnique()
-            .HasDatabaseName("ix_motoristas_cnh");
 
         // filtro global — soft delete
         builder.HasQueryFilter(m => !m.Excluido);
