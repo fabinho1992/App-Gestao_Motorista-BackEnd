@@ -9,5 +9,7 @@ namespace RotaCerta.Infraestructure.Context.Identity
         public string DisplayName { get; set; } = string.Empty;
         public string ResetToken { get; set; } = string.Empty;
         public DateTimeOffset ResetTokenExpiration { get; set; }
+        public string EmailConfirmationCode { get; set; } = string.Empty;
+        public DateTimeOffset EmailConfirmationCodeExpiration { get; set; }
     }
 }

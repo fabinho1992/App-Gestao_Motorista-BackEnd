@@ -20,6 +20,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RotaCerta.API.Controllers.AssinaturaController",
+    "Method": "Status",
+    "RelativePath": "api/v1/assinatura/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RotaCerta.API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/v1/auth/login",
@@ -187,6 +197,32 @@
   },
   {
     "ContainingType": "RotaCerta.API.Controllers.EmailController",
+    "Method": "Confirmar",
+    "RelativePath": "api/v1/email/confirmar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "RotaCerta.Application.EmailHandler.Commands.ConfirmarEmail.ConfirmarEmailCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.EmailController",
+    "Method": "SolicitarConfirmacao",
+    "RelativePath": "api/v1/email/solicitar-confirmacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.EmailController",
     "Method": "SolicitarReset",
     "RelativePath": "api/v1/email/solicitar-reset",
     "HttpMethod": "POST",
@@ -199,6 +235,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RotaCerta.API.Controllers.EmailController",
+    "Method": "Status",
+    "RelativePath": "api/v1/email/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

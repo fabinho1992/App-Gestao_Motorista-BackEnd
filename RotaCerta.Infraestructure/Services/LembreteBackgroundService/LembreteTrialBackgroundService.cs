@@ -15,7 +15,7 @@ namespace RotaCerta.Infraestructure.Services.LembreteBackgroundService
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly ILogger<LembreteTrialBackgroundService> _logger;
         private readonly TimeSpan _intervalo = TimeSpan.FromHours(24);
-        private const int DiasAntesDoVencimento = 2;
+        private const int DiasAntesDoVencimento = 30;
 
         public LembreteTrialBackgroundService(IServiceScopeFactory scopeFactory, ILogger<LembreteTrialBackgroundService> logger)
         {

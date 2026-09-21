@@ -667,6 +667,13 @@ namespace RotaCerta.Infraestructure.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)");
 
+                    b.Property<string>("EmailConfirmationCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("EmailConfirmationCodeExpiration")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
 

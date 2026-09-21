@@ -10,5 +10,6 @@ namespace RotaCerta.Domain.Services.IEmail
         Task ResetPassword(Motorista usuario, string code);
         Task LembreteTrialAsync(Motorista motorista, int diasRestantes);
         Task LembreteRenovacaoAsync(Motorista motorista, int diasRestantes);
+        Task EnviarConfirmacaoEmailAsync(Motorista motorista, string code);
     }
 }
